@@ -21,7 +21,7 @@ class CreateClientTable extends Migration
             $table->string('password', 60);
             $table->string('nit');
             $table->integer('valoration');
-            
+              
             $table->timestamps();
         });
     }
