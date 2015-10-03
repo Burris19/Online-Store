@@ -22,7 +22,7 @@ class CreateSaleTable extends Migration
             $table->foreign('id_store')->references('id')->on('stores');
 
             $table->integer('id_transaction')->unsigned();
-            $table->foreign('id_transaction')->references('id')->('providers');
+            $table->foreign('id_transaction')->references('id')->on('providers');
 
             $table->string('address');
             $table->decimal('shipping_price',18,2);

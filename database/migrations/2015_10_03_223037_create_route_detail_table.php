@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRouteDetailTalbe extends Migration
+class CreateRouteDetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,17 +12,17 @@ class CreateRouteDetailTalbe extends Migration
      */
     public function up()
     {
-        Schema::create('routeDetails', function (Blueprint $table) {
+        Schema::create('routeDetail', function (Blueprint $table) {
             $table->increments('id');
 
             $table->integer('id_sale')->unsigned();
-            $table->foreign('id_sale')->foreign('id')->on('sales');
+            $table->foreign('id_sale')->references('id')->on('sales');
 
             $table->integer('id_route')->unsigned();
-            $table->foreign('id_route')->foreign('id')->on('routes');
+            $table->foreign('id_route')->references('id')->on('routes');
 
             $table->string('observation');
-            
+
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class CreateRouteDetailTalbe extends Migration
      */
     public function down()
     {
-        Schema::drop('routeDetails');
+        Schema::drop('routeDetail');
     }
 }

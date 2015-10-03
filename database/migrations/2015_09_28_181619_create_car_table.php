@@ -12,7 +12,7 @@ class CreateCarTable extends Migration
      */
     public function up()
     {
-        Schema::create('cards', function (Blueprint $table) {
+        Schema::create('cars', function (Blueprint $table) {
             $table->increments('id');
 
             $table->integer('id_store')->unsigned();

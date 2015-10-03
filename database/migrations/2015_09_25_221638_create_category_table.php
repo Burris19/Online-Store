@@ -18,6 +18,7 @@ class CreateCategoryTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('image');
+
             $table->timestamps();
         });
     }

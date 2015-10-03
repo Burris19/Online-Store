@@ -17,6 +17,7 @@ class CreateStoreTable extends Migration
             $table->string('code');
             $table->string('name');
             $table->string('phone');
+            
             $table->timestamps();
         });
     }

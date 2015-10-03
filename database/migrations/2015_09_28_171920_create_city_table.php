@@ -18,7 +18,7 @@ class CreateCityTable extends Migration
             $table->integer('id_department')->unsigned();
             $table->foreign('id_department')->references('id')->on('departments');
 
-            $talbe->string('description');
+            $table->string('description');
 
             $table->timestamps();
         });

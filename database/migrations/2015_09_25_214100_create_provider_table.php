@@ -20,6 +20,7 @@ class CreateProviderTable extends Migration
             $table->string('email');
             $table->string('logo');
             $table->string('code');
+
             $table->timestamps();
         });
 

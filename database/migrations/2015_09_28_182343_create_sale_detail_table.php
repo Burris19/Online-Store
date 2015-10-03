@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSaleDetail extends Migration
+class CreateSaleDetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,10 +16,10 @@ class CreateSaleDetail extends Migration
             $table->increments('id');
 
             $table->integer('id_sale')->unsigned();
-            $table->foreign('id_sale')->foreign('id')->on('sales');
+            $table->foreign('id_sale')->references('id')->on('sales');
 
             $table->integer('id_product')->unsigned();
-            $table->foreign('id_product')->foreign('id')->('products');
+            $table->foreign('id_product')->references('id')->on('products');
 
             $table->integer('quantity');
             $table->decimal('price',18,2);
