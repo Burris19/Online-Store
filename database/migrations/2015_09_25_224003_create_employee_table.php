@@ -18,7 +18,6 @@ class CreateEmployeeTable extends Migration
             $table->integer('id_type_employee')->unsigned();
             $table->foreign('id_type_employee')->regerences('id')->on('typeEmployees');
 
-
             $table->integer('id_store')->unsigned();
             $table->foreign('id_store')->references('id')->on('stores');
 
@@ -26,7 +25,7 @@ class CreateEmployeeTable extends Migration
             $table->string('last_name');
             $table->string('phone');
             $table->string('image');
-            $table->integer('license_no');            
+            $table->integer('license_no');
             $table->enum('type_license', ['A','B','C','D']);
 
 
