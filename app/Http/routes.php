@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin.products.list');
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('products', 'ProductController');
 });

@@ -16,12 +16,11 @@
         <div class="content-wrapper">
             <section class="content-header">
                 <h1>
-                  Dashboard
-                  <small>Control panel</small>
+                  @yield('title')
+                  <small>listado</small>
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
+                <ol class="breadcrumb" style="">
+                  <button class="btn btn-block btn-primary btn-sm create">Crear registro</button>
                 </ol>
             </section>
             <section class="content">
