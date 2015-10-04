@@ -1,8 +1,14 @@
 @extends('admin._base.home.layout')
-
-@section('title')
-Productos
+@section('header')
+    <h1>
+      Productos
+      <small>listado</small>
+    </h1>
+    <ol class="breadcrumb" style="">
+      <button class="btn btn-block btn-primary btn-sm create">Crear registro</button>
+    </ol>
 @endsection
+
 @section('content')
     <div class="row">
         <div class="col-xs-12">

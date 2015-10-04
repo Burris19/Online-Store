@@ -15,13 +15,7 @@
         </aside>
         <div class="content-wrapper">
             <section class="content-header">
-                <h1>
-                  @yield('title')
-                  <small>listado</small>
-                </h1>
-                <ol class="breadcrumb" style="">
-                  <button class="btn btn-block btn-primary btn-sm create">Crear registro</button>
-                </ol>
+                @yield('header')
             </section>
             <section class="content">
                 @yield('content')
