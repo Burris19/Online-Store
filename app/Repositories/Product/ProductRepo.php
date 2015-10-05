@@ -8,4 +8,5 @@ class ProductRepo extends BaseRepo {
     {
         return new Product();
     }
+
 }
