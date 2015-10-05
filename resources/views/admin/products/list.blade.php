@@ -5,7 +5,7 @@
       <small>listado</small>
     </h1>
     <ol class="breadcrumb" style="">
-      <button class="btn btn-block btn-primary btn-sm create">Crear registro</button>
+      <button data-root = 'products' class="btn btn-block btn-primary btn-sm create">Crear registro</button>
     </ol>
 @endsection
 

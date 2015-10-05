@@ -1,6 +1,7 @@
 $(function(){
     $('.create').on('click',function(){
-        $('.content').load('products/create');
+        var route = $(this).data('root');
+        $('.content').load( route + '/create');
     });
 
 });
