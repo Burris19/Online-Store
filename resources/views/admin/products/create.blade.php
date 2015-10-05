@@ -35,13 +35,14 @@
                   <div class="form-group">
                       <label class="col-sm-2 control-label">Categoria</label>
                       <div class="col-sm-10">
-                          {!! Form::select('id_category', array('L' => 'Large', 'S' => 'Small'), null, ['placeholder' => 'Seleccione una categoria', 'class' => 'form-control']) !!}
+                          {!! Form::select('id_category', $Categories, null, ['placeholder' => 'Seleccione una categoria', 'class' => 'form-control']) !!}
                       </div>
                   </div>
                   <div class="form-group">
                       <label class="col-sm-2 control-label">Proveedor</label>
                       <div class="col-sm-10">
-                          {!! Form::select('id_provider', array('L' => 'Large', 'S' => 'Small'), null, ['placeholder' => 'Seleccione un proveedor', 'class' => 'form-control']) !!}
+                          {!! Form::select('id_provider', $Provider, null , ['placeholder' => 'Seleccione un proveedor', 'class' => 'form-control']) !!}
+
                       </div>
                   </div>
                   <div class="form-group">

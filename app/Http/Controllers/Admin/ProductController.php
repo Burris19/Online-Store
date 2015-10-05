@@ -32,12 +32,9 @@ class ProductController extends CRUDController
      */
     public function create()
     {
-
-        $Categories = $this->categoryRepo->getAll();
-        $Provider = $this->providerRepo->getAll();
-        return $Provider;
-
-        return view($this->root . '/' . $this->module . '/create', compact('Categories'));
+        $Categories = $this->categoryRepo->lists('title','id');
+        $Provider = $this->providerRepo->lists('name','id');
+        return view($this->root . '/' . $this->module . '/create', compact('Categories','Provider'));
     }
 
 

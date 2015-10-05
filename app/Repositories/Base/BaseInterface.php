@@ -18,4 +18,6 @@ interface BaseInterface {
 
     public function getWithRelations();
 
+    public function lists($value,$value2);
+
 }
