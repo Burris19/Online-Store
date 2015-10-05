@@ -30,6 +30,13 @@ class ProductController extends CRUDController
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function  index()
+    {
+        $data = $this->repo->getWithRelations();
+        return view($this->root . '/' . $this->module  .'/list',compact('data'));
+    }
+
     public function create()
     {
         $Categories = $this->categoryRepo->lists('title','id');

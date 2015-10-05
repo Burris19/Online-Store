@@ -26,6 +26,7 @@ class CreateProductTable extends Migration
             $table->string('code');
             $table->decimal('price',18,2);
             $table->string('image');
+            $table->integer('existence');
 
             $table->timestamps();
 

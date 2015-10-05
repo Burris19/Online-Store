@@ -29,22 +29,16 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Televisor</td>
-                        <td>Electrodomesticos</td>
-                        <td>Q 5800</td>
-                        <td>25</td>
-                        <td>Elecktra</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Televisor</td>
-                        <td>Electrodomesticos</td>
-                        <td>Q 5800</td>
-                        <td>25</td>
-                        <td>Elecktra</td>
-                      </tr>
+                        @foreach($data as  $key => $product)
+                            <tr>
+                                <td>{{ $key + 1   }}</td>
+                                <td>{{ $product->title }} </td>
+                                <td>{{ $product->category->title }} </td>
+                                <td>{{ $product->price  }}</td>
+                                <td>{{ $product->existence }} </td>
+                                <td>{{ $product->provider->name }} </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                   </table>
                 </div>
