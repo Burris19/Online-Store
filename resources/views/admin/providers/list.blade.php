@@ -29,9 +29,9 @@
                       </tr>
                     </thead>
                     <tbody>
-   	 	                  @foreach($data as $valor)
+   	 	                  @foreach($data as $key=> $valor)
    	 		                   <tr>
-                     	 			<td>{{ $valor->id}}</td>
+                     	 			<td>{{ $key+1}}</td>
                      	 			<td>{{ $valor->name}}</td>
                      	 			<td>{{ $valor->description}}</td>
                      	 			<td>{{ $valor->phone}}</td>
