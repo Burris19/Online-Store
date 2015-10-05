@@ -1,67 +1,61 @@
-
 <div class="row">
-  <div class="col-md-12">
+    <div class="col-md-12">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Registrar producto</h3>
+            </div><!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal">
+                <div class="box-body">
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Codigo</label>
+                      <div class="col-sm-10">
+                          {!! Form::text('code',null,['class' => 'form-control', 'placeholder' => 'Codigo del producto debe de ser unico']) !!}
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Nombre</label>
+                      <div class="col-sm-10">
+                          {!! Form::text('title',null,['class' => 'form-control', 'placeholder' => 'Nombre del producto']) !!}
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">descripcion</label>
+                      <div class="col-sm-10">
+                        {!! Form::textarea('description',null,['class' => 'form-control', 'placeholder' => 'Descriptcion del producto', 'rows' => '4']) !!}
 
-    <div class="box box-danger">
-      <div class="box-header">
-        <h3 class="box-title">Input masks</h3>
-      </div>
-      <div class="box-body">
-        <!-- Date dd/mm/yyyy -->
-        <div class="form-group">
-          <label>Date masks:</label>
-          <div class="input-group">
-            <div class="input-group-addon">
-              <i class="fa fa-calendar"></i>
-            </div>
-            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-          </div><!-- /.input group -->
-        </div><!-- /.form group -->
-
-        <!-- Date mm/dd/yyyy -->
-        <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-addon">
-              <i class="fa fa-calendar"></i>
-            </div>
-            <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
-          </div><!-- /.input group -->
-        </div><!-- /.form group -->
-
-        <!-- phone mask -->
-        <div class="form-group">
-          <label>US phone mask:</label>
-          <div class="input-group">
-            <div class="input-group-addon">
-              <i class="fa fa-phone"></i>
-            </div>
-            <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
-          </div><!-- /.input group -->
-        </div><!-- /.form group -->
-
-        <!-- phone mask -->
-        <div class="form-group">
-          <label>Intl US phone mask:</label>
-          <div class="input-group">
-            <div class="input-group-addon">
-              <i class="fa fa-phone"></i>
-            </div>
-            <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
-          </div><!-- /.input group -->
-        </div><!-- /.form group -->
-
-        <!-- IP mask -->
-        <div class="form-group">
-          <label>IP mask:</label>
-          <div class="input-group">
-            <div class="input-group-addon">
-              <i class="fa fa-laptop"></i>
-            </div>
-            <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
-          </div><!-- /.input group -->
-        </div><!-- /.form group -->
-
-      </div><!-- /.box-body -->
-    </div><!-- /.box -->
-  </div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Precio</label>
+                      <div class="col-sm-10">
+                          {!! Form::number('price', null, ['class' => 'form-control', 'placeholder' => 'Precio de venta']) !!}
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Categoria</label>
+                      <div class="col-sm-10">
+                          {!! Form::select('id_category', array('L' => 'Large', 'S' => 'Small'), null, ['placeholder' => 'Seleccione una categoria', 'class' => 'form-control']) !!}
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Proveedor</label>
+                      <div class="col-sm-10">
+                          {!! Form::select('id_provider', array('L' => 'Large', 'S' => 'Small'), null, ['placeholder' => 'Seleccione un proveedor', 'class' => 'form-control']) !!}
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Imagen</label>
+                    <div class="col-sm-10">
+                        {!! Form::file('image',['class' => 'form-control']) !!}
+                    </div>
+                  </div>
+                </div><!-- /.box-body -->
+                <div class="box-footer">
+                <button type="submit" class="btn btn-danger btn-normal">Cancel</button>
+                <button type="submit" class="btn btn-primary pull-right btn-normal">Confirmar</button>
+                </div><!-- /.box-footer -->
+            </form>
+        </div>
+    </div>
 </div>
