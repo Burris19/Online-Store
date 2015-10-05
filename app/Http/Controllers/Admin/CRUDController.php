@@ -1,13 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ProductController extends Controller
+
+class CRUDController extends Controller
 {
+    protected $repo;
+    protected $module = '';
+    protected $root = 'admin';
+
+
+    function __construct($middleware = 'auth')
+    {
+        //$this->middleware($middleware);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +26,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.products.list');
+        return view($this->root . '/' . $this->module  .'/list');
     }
 
     /**
@@ -25,7 +36,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        return view($this->root . '/' . $this->module . '/create');
     }
 
     /**
