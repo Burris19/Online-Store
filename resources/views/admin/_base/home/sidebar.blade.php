@@ -5,7 +5,7 @@
       <a href="products">
         <i class="fa fa-envelope"></i> <span>Productos</span>
       </a>
-      <a href="proveedores">
+      <a href="providers">
         <i class="fa fa-envelope"></i> <span>Proveedores</span>
       </a>
     </li>

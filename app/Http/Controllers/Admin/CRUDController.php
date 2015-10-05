@@ -26,7 +26,7 @@ class CRUDController extends Controller
      */
     public function index()
     {
-        return view($this->root . '/' . $this->module  .'/list');
+        return view($this->root . '/' . $this->module  .'/list');        
     }
 
     /**
