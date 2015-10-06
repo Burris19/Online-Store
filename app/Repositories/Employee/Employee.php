@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Repositories\Employee;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
 {
-      protected $table = 'employee';
+      protected $table = 'employees';
 
       protected $fillable = [
           'id_type_employee',

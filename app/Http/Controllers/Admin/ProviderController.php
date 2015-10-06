@@ -9,6 +9,7 @@ use App\Repositories\Provider\ProviderRepo;
 
 class ProviderController extends CRUDController
 {
+
     protected $module = 'providers';
 
     function __construct(ProviderRepo $providerRepo)

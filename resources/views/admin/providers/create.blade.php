@@ -1,3 +1,7 @@
+<div id="respuesta" class="alert alert-info">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong></strong>
+</div>
 <div class="row">
     <div class="col-md-12">
         <div class="box box-info">
@@ -5,7 +9,7 @@
                 <h2 class="box-title">Registrar Proveedores</h2>
             </div><!-- /.box-header -->
             <!-- form start -->
-              {!!Form::open(array('url'=>'provider/create','method'=>'post','id'=>'form-create','class'=>'form-horizontal'))!!}
+              {!!Form::open([ 'method' => 'post', 'id'=>'form-create','class'=>'form-horizontal','data-url' => 'providers'])!!}
                 <div class="box-body">
                   <div class="form-group">
                       <label class="col-sm-2 control-label">Codigo</label>
@@ -47,7 +51,7 @@
                 </div>
                 <div class="box-footer">
                 <button data-root="providers" class="btn btn-danger btn-normal back">Cancelar</button>
-                <button class="btn btn-primary pull-right btn-normal confirm">Confirmar</button>
+                <button  type="button" id="btn-save" class="btn btn-primary pull-right btn-normal">Guardar</button>
                 </div>
             {!!Form::close()!!}
         </div>
