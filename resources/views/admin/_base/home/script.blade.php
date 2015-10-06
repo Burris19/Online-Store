@@ -20,3 +20,4 @@
 {!! Html::script('dist/js/pages/dashboard.js"') !!}
 {!! Html::script('dist/js/demo.js') !!}
 {!! Html::script('access/helps.js') !!}
+

@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Helpers\FunctionX;
 
 class CRUDController extends Controller
 {
+    protected $rules = array();
     protected $repo;
     protected $module = '';
     protected $root = 'admin';
@@ -49,7 +50,22 @@ class CRUDController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data =$request->all();
+        $validator = \Validator::make($data, $this->rules);
+        $success = true;
+        $message = "Registro guardado exitosamente";
+        $record = null;
+        if ($validator->passes())
+        {
+            $record = $this->repo->create($data);
+            return compact('success','message','record','data');
+        }
+        else
+        {
+            $success=false;
+            $message = $validator->messages();
+            return compact('success','message','record','data');
+        }
     }
 
     /**

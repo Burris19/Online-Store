@@ -1,3 +1,7 @@
+<div id="respuesta" class="alert alert-info">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong></strong>
+</div>
 <div class="row">
     <div class="col-md-12">
         <div class="box box-info">
@@ -5,7 +9,8 @@
                 <h3 class="box-title">Registrar producto</h3>
             </div><!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal">
+            {!! Form::open( [ 'method' => 'post' , 'id' => 'form-create', 'class' => 'form-horizontal', 'data-url' => 'products' ]) !!}
+
                 <div class="box-body">
                   <div class="form-group">
                       <label class="col-sm-2 control-label">Codigo</label>
@@ -46,17 +51,25 @@
                       </div>
                   </div>
                   <div class="form-group">
+                      <label class="col-sm-2 control-label">Existencia</label>
+                      <div class="col-sm-10">
+                          {!! Form::number('existence', null, ['class' => 'form-control', 'placeholder' => 'Cantidad de producto']) !!}
+                      </div>
+                  </div>
+                  <div class="form-group">
                     <label class="col-sm-2 control-label">Imagen</label>
                     <div class="col-sm-10">
                         {!! Form::file('image',['class' => 'form-control']) !!}
                     </div>
                   </div>
-                </div><!-- /.box-body -->
+                </div>
+
                 <div class="box-footer">
-                <button type="submit" class="btn btn-danger btn-normal">Cancel</button>
-                <button type="submit" class="btn btn-primary pull-right btn-normal">Confirmar</button>
-                </div><!-- /.box-footer -->
-            </form>
+                    <button  type="button" data-root= "products" class="btn btn-danger btn-normal back">Cancel</button>
+                    <button  type="button" id="btn-save" class="btn btn-primary pull-right btn-normal">Guardar</button>
+                </div>
+            {!! Form::close() !!}
         </div>
     </div>
 </div>
+{!! Html::script('access/helps.js') !!}
