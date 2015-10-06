@@ -5,7 +5,7 @@
                 <h2 class="box-title">Registrar Proveedores</h2>
             </div><!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal">
+              {!!Form::open(array('url'=>'provider/create','method'=>'post','id'=>'form-create','class'=>'form-horizontal'))!!}
                 <div class="box-body">
                   <div class="form-group">
                       <label class="col-sm-2 control-label">Codigo</label>
@@ -44,12 +44,13 @@
                         {!! Form::file('logo',['class' => 'form-control']) !!}
                     </div>
                   </div>
-                </div><!-- /.box-body -->
+                </div>
                 <div class="box-footer">
-                <button class="btn btn-danger btn-normal">Cancelar</button>
-                <button class="btn btn-primary pull-right btn-normal">Confirmar</button>
-                </div><!-- /.box-footer -->
-            </form>
+                <button data-root="providers" class="btn btn-danger btn-normal back">Cancelar</button>
+                <button class="btn btn-primary pull-right btn-normal confirm">Confirmar</button>
+                </div>
+            {!!Form::close()!!}
         </div>
     </div>
 </div>
+{!! Html::script('access/helps.js') !!}
