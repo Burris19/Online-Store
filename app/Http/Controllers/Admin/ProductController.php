@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Repositories\Product\ProductRepo;
 use App\Repositories\Category\CategoryRepo;
 use App\Repositories\Provider\ProviderRepo;
+use Validator;
 
 class ProductController extends CRUDController
 {
@@ -14,6 +15,14 @@ class ProductController extends CRUDController
     protected $productRepo;
     protected $categoryRepo;
     protected $providerRepo;
+
+    protected $rules = [
+        'code' => 'required|unique:products',
+        'title' => 'required',
+        'price' => 'required|integer',
+        'id_provider' => 'required|integer',
+        'id_category' => 'required|integer'
+    ];
 
     function __construct(ProductRepo $productRepo,
                          CategoryRepo $categoryRepo,
@@ -43,6 +52,7 @@ class ProductController extends CRUDController
         $Provider = $this->providerRepo->lists('name','id');
         return view($this->root . '/' . $this->module . '/create', compact('Categories','Provider'));
     }
+
 
 
 
