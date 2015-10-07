@@ -16,5 +16,6 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
     Route::resource('providers','ProviderController');
     Route::resource('typeEmployees','TypeEmployeeController');
     Route::resource('employees','EmployeeController');
+    Route::resource('stores','StoreController');
 
 });

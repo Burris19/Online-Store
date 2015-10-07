@@ -40,6 +40,7 @@
                                 <td>{{ $employee->type_license }} </td>
                                 <td>{{ $employee->license_no }}</td>
                                 <td>{{ $employee->typeEmployee->description }} </td>
+                                <td>{{ $employee->store->name }}</td>
                             </tr>
                         @endforeach
                     </tbody>

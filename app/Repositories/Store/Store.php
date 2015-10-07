@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Repositories\Store;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,5 +13,5 @@ class Store extends Model
         'name',
         'phone'
     ];
-    
+
 }

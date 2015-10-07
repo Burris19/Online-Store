@@ -18,4 +18,25 @@ class Employee extends Model
           'license_no',
           'type_license'
       ];
+
+      public $relations = [
+          'typeEmployee',
+          'store'
+      ];
+
+      // Relations
+
+      public function typeEmployee()
+      {
+          return $this->hasOne('App\Repositories\TypeEmployee\TypeEmployee', 'id','id_type_employee');
+      }
+
+      public function store()
+      {
+          return $this->hasOne('App\Repositories\Store\Store','id','id_store');
+      }
+
+
+
+
 }
