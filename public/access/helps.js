@@ -49,5 +49,54 @@ $(function(){
         });
     });
 
+    var indice = 0;
+    var dato;
+    $("#addCity").keyup(function (e) {
+
+        if (e.keyCode == 13 ) {
+            dato = $("#addCity").val();
+            indice++;
+            $('.table tr:last').after('<tr><td>' + indice +' </td> <td> ' + dato + '</td></tr>');
+        }
+    });
+
+      $('#btn-save2').on('click',function(){
+          var cells = new Array();
+           $('#municipios tr td').each(function(){
+               cells.push($(this).html());
+           });
+           var depto = { 'departamento' : $('#depto').val() };
+
+           $.ajax({
+               url: 'departaments',
+               type: 'post',
+               data: cells.serialize(),
+               success: function(response) {
+                   console.log(response);
+                   if(response) {
+
+                        if(response.success){
+                           console.log(response);
+
+
+                        }else{
+                            console.log(response);
+
+
+                        }
+
+                   }
+               },
+               error: function(xhr,ajaxOptions,thrownError){
+                   console.log(xhr.status);
+                   console.error(thrownError);
+               }
+           });
+
+
+
+
+
+      });
 
 });

@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Models;
+namespace App\Repositories\Departament;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Department extends Model
+class Departament extends Model
 {
     protected $table = 'departments';
     protected $fillable = [
         'description'
     ];
 
-    
+
 }

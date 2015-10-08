@@ -14,6 +14,12 @@
       <a href="employees">
         <i class="fa fa-envelope"></i> <span>Empleados</span>
       </a>
+      <a href="stores">
+        <i class="fa fa-envelope"></i> <span>Tiendas</span>
+      </a>
+      <a href="departaments">
+        <i class="fa fa-envelope"></i> <span>Departamentos</span>
+      </a>
     </li>
   </ul>
 </section>
