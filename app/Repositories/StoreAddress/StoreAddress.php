@@ -22,7 +22,7 @@ class StoreAddress extends Model
 
       public function stores()
       {
-        return $this->hasOne('App\Repositories\Stores\Stores' , 'id' , 'id_store');
+        return $this->hasOne('App\Repositories\Store\Store' , 'id' , 'id_store');
       }
 
       public function cities()

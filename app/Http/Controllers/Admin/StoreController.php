@@ -40,7 +40,7 @@ class StoreController extends CRUDController
   public function index()
   {
       $data = $this->storeAddressRepo->getWithRelations();
-      return $data;
+      //return $data;
       return view($this->root . '/' . $this->module  .'/list',compact('data'));
   }
 

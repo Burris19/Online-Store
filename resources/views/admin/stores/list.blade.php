@@ -36,8 +36,8 @@
                      	 			<td>{{ $valor->stores->code}}</td>
                      	 			<td>{{ $valor->stores->name}}</td>
                      	 			<td>{{ $valor->stores->phone}}</td>
-                            <td>{{ $valor->address }}</td>
-                            <td>{{$valor->address }}</td>
+                            <td>{{ $valor->cities->departments->description }}</td>
+                            <td>{{ $valor->cities->description }}</td>
                             <td>{{ $valor->address }}</td>
                      	 		</tr>
                      	 	@endforeach

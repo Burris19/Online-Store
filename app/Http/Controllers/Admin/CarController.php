@@ -27,7 +27,7 @@ class CarController extends CRUDController
 
   }
 
-  public function create()``
+  public function create()
   {
       $Store=$this->storeRepo->lists('name','id');
       return view($this->root . '/' . $this->module . '/create', compact('Store'));
