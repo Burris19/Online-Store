@@ -48,7 +48,6 @@ $(function(){
             }
         });
     });
-
     var indice = 0;
     var dato;
     $("#addCity").keyup(function (e) {
@@ -98,5 +97,38 @@ $(function(){
 
 
       });
+
+    //var idDepartment = $('#idDepartment').val();
+
+    $('#idDepartment').change(function(){
+        var id = $(this).val();
+        getCities(id);
+    });
+
+    function getCities(id)
+    {
+        $.ajax({
+            url: 'depart/' + id ,
+            type: 'get',
+            data: null,
+            success: function(response) {
+                console.log(response);
+                var combo = $('#cboMunicipio');
+                combo.find('option').remove();
+                $.each(response,function(key, value)
+                {
+                    combo.append('<option value=' + key + '>' + value + '</option>');
+                });
+
+
+            },
+            error: function(xhr,ajaxOptions,thrownError){
+                console.log(xhr.status);
+                console.error(thrownError);
+            }
+        });
+    }
+
+
 
 });

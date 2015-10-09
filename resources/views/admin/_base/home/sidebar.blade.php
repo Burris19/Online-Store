@@ -3,7 +3,7 @@
     <li class="header">Panel de Administracion</li>
     <li>
       <a href="products">
-        <i class="fa fa-envelope"></i> <span>Productos</span>
+        <i class="glyphicon glyphicon-apple"></i> <span>Productos</span>
       </a>
       <a href="providers">
         <i class="fa fa-envelope"></i> <span>Proveedores</span>

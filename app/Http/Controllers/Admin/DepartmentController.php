@@ -5,22 +5,24 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Repositories\Departament\DepartamentRepo;
+use App\Repositories\Department\DepartmentRepo;
 
 
-class DepartamentController extends CRUDController
+class DepartmentController extends CRUDController
 {
-    protected $module='departaments';
+    protected $module='departments';
 
 
-    function __construct(DepartamentRepo $departamentRepo)
+    function __construct(DepartmentRepo $departmentRepo)
     {
-        $this->repo=$departamentRepo;
+        $this->repo=$departmentRepo;
     }
     public function store(Request $request)
     {
         $data =$request->all();
         return $data;
     }
+
+
 
 }

@@ -6,10 +6,10 @@
     <div class="col-md-12">
         <div class="box box-info">
             <div class="box-header with-border">
-                <h2 class="box-title">Registrar Proveedores</h2>
+                <h2 class="box-title">Registrar Tienda</h2>
             </div><!-- /.box-header -->
             <!-- form start -->
-              {!!Form::open([ 'method' => 'post', 'id'=>'form-create','class'=>'form-horizontal','data-url' => 'providers'])!!}
+              {!!Form::open([ 'method' => 'post', 'id'=>'form-create','class'=>'form-horizontal','data-url' => 'stores'])!!}
                 <div class="box-body">
                   <div class="form-group">
                       <label class="col-sm-2 control-label">Codigo</label>
@@ -24,31 +24,25 @@
                       </div>
                   </div>
                   <div class="form-group">
-                      <label class="col-sm-2 control-label">Descripcion</label>
-                      <div class="col-sm-10">
-                        {!! Form::textarea('description',null,['class' => 'form-control', 'placeholder' => 'Descriptcion del Proveedor', 'rows' => '2']) !!}
-
-                      </div>
-                  </div>
-                  <div class="form-group">
                       <label class="col-sm-2 control-label">Telefono</label>
                       <div class="col-sm-10">
                             {!! Form::text('phone',null,['class' => 'form-control', 'placeholder' => 'Nombre del producto']) !!}
                       </div>
                   </div>
                   <div class="form-group">
-                      <label class="col-sm-2 control-label">Email</label>
-                      <div class="col-sm-10">
-                            {!! Form::email('email',null,['class' => 'form-control', 'placeholder' => 'Correo del Proveedor']) !!}
-                      </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Imagen</label>
+                    <label class="col-sm-2 control-label">Departamento</label>
                     <div class="col-sm-10">
-                        {!! Form::file('logo',['class' => 'form-control']) !!}
+                      {!! Form::select('description', $department, null , ['placeholder' => 'Seleccione un Departamento', 'class' => 'form-control', 'id' => 'idDepartment']) !!}
                     </div>
                   </div>
-                
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Municipio</label>
+                    <div class="col-sm-10">
+                      {!! Form::select('description', [] ,null , ['placeholder' => 'Seleccione un Departamento', 'class' => 'form-control', 'id' => 'cboMunicipio']) !!}
+                    </div>
+                  </div>
+
+
                 </div>
                 <div class="box-footer">
                 <button data-root="providers" class="btn btn-danger btn-normal back">Cancelar</button>

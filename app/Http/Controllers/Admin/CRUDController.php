@@ -76,7 +76,7 @@ class CRUDController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
