@@ -34,7 +34,7 @@
                   <div class="form-group">
                       <label class="col-sm-2 control-label">Tipo</label>
                       <div class="col-sm-10">
-                        {!! Form::select('type_license', ['1' => 'Camion', '2' => 'Motocicleta' , '3' => 'Pick-Up'] , null , ['placeholder' => 'Sleccione Un tipo', 'class' => 'form-control']) !!}
+                        {!! Form::select('type', ['1' => 'Camion', '2' => 'Motocicleta' , '3' => 'Pick-Up'] , null , ['placeholder' => 'Sleccione Un tipo', 'class' => 'form-control']) !!}
                       </div>
                   </div>
 
