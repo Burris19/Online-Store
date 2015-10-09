@@ -7,8 +7,9 @@
         <div class="box box-info">
             <div class="box-header with-border">
                 <h3 class="box-title">Registrar producto</h3>
-            </div><!-- /.box-header -->
-            <!-- form start -->
+            </div>
+
+
             {!! Form::open( [ 'method' => 'post' , 'id' => 'form-create', 'class' => 'form-horizontal', 'data-url' => 'products' ]) !!}
 
                 <div class="box-body">

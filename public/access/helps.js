@@ -60,43 +60,35 @@ $(function(){
         }
     });
 
-      $('#btn-save2').on('click',function(){
-          var cells = new Array();
-           $('#municipios tr td').each(function(){
-               cells.push($(this).html());
-           });
-           var depto = { 'departamento' : $('#depto').val() };
+    /*
+        Guardar los departamentos
+     */
+      $('#btn-save2').on('click',function(e){
+            //$(this).prop('disabled',true);
+            var form = $('#form-create');
+            var cells = new Array();
+            cells.push('name_department' , $('#depto').val());
+            $('#municipios tr td').each(function(){
+                cells.push($(this).html());
+            });
 
-           $.ajax({
-               url: 'departaments',
-               type: 'post',
-               data: cells.serialize(),
+            $.ajax({
+               headers: {
+                   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+               },
+               url: form.attr('data-url'),
+                type: form.prop('method'),
+                dataType   : 'json',
+                contentType: 'application/json; charset=UTF-8',
+                data: JSON.stringify({ cells : cells }),
                success: function(response) {
                    console.log(response);
-                   if(response) {
-
-                        if(response.success){
-                           console.log(response);
-
-
-                        }else{
-                            console.log(response);
-
-
-                        }
-
-                   }
                },
                error: function(xhr,ajaxOptions,thrownError){
                    console.log(xhr.status);
                    console.error(thrownError);
                }
-           });
-
-
-
-
-
+            });
       });
 
 });

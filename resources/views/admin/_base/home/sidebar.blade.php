@@ -17,7 +17,7 @@
       <a href="stores">
         <i class="fa fa-envelope"></i> <span>Tiendas</span>
       </a>
-      <a href="departaments">
+      <a href="departments">
         <i class="fa fa-envelope"></i> <span>Departamentos</span>
       </a>
     </li>
