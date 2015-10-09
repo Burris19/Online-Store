@@ -6,40 +6,43 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Repositories\Department\DepartmentRepo;
+use App\Repositories\City\CityRepo;
 
 
 class DepartmentController extends CRUDController
 {
-    protected $module = 'departments';
+    protected $module='departments';
+    protected $cityRepo;
 
-    function __construct(DepartmentRepo $departmentRepo)
+
+    function __construct(DepartmentRepo $departmentRepo,
+                         CityRepo $cityRepo)
     {
-        $this->repo = $departmentRepo;
-    }
+        $this->repo=$departmentRepo;
+        $this->cityRepo = $cityRepo;
 
+    }
     public function store(Request $request)
     {
-        $data = $request->all();
-        $info =  $data['cells'];
-        $depart = array();
-        $cities = array();
-
-
-        foreach ($info as $index => $value) {
-            if ($index == 1)
+        $data =$request->all();
+        $department = array();
+        $city = array();
+        $id_department = 0;
+        foreach( $data['cells'] as $key => $value)
+        {
+            if($key == 1)
             {
-                $depart['description'] = $value;
-                $this->repo->create($depart);
+                $department['description'] = $value;
+                $record = $this->repo->create($department);
+                $id_department = $record->id;
             }
-
-            $cities['description'] = $value;
-
-
+            if($key == 2)
+            {
+                $city['description'] = $value;
+                $city['id_department'] = $id_department;
+                $this->cityRepo->create($city);
+            }
         }
-
-        return compact('depart','cities');
-
-
     }
 
 

@@ -11,5 +11,5 @@ class Department extends Model
         'description'
     ];
 
-
+    
 }

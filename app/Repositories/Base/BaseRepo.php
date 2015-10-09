@@ -70,7 +70,7 @@ abstract class BaseRepo implements BaseInterface {
         return $this->getModel()
                     ->all();
     }
-    
+
     public function getWithRelations()
     {
         return $this->getModel()
