@@ -32,16 +32,21 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Departamento</label>
                     <div class="col-sm-10">
-                      {!! Form::select('description', $department, null , ['placeholder' => 'Seleccione un Departamento', 'class' => 'form-control', 'id' => 'idDepartment']) !!}
+                      {!! Form::select('department', $department, null , ['placeholder' => 'Seleccione un Departamento', 'class' => 'form-control', 'id' => 'idDepartment']) !!}
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Municipio</label>
                     <div class="col-sm-10">
-                      {!! Form::select('description', [] ,null , ['placeholder' => 'Seleccione un Departamento', 'class' => 'form-control', 'id' => 'cboMunicipio']) !!}
+                      {!! Form::select('id_city', [] ,null , ['placeholder' => 'Seleccione un Departamento', 'class' => 'form-control', 'id' => 'cboMunicipio']) !!}
                     </div>
                   </div>
-
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Municipio</label>
+                    <div class="col-sm-10">
+                      {!! Form::text('address', null , ['placeholder' => 'Direccion recidencial', 'class' => 'form-control']) !!}
+                    </div>
+                  </div>
 
                 </div>
                 <div class="box-footer">

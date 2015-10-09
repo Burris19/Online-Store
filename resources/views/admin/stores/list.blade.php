@@ -33,11 +33,12 @@
    	 	                  @foreach($data as $key=> $valor)
    	 		                   <tr>
                      	 			<td>{{ $key+1}}</td>
-                     	 			<td>{{ $valor->name}}</td>
-                     	 			<td>{{ $valor->description}}</td>
-                     	 			<td>{{ $valor->phone}}</td>
-                            <td>{{ $valor->email}}</td>
-                            <td>{{ $valor->code}}</td>
+                     	 			<td>{{ $valor->stores->code}}</td>
+                     	 			<td>{{ $valor->stores->name}}</td>
+                     	 			<td>{{ $valor->stores->phone}}</td>
+                            <td>{{ $valor->address }}</td>
+                            <td>{{$valor->address }}</td>
+                            <td>{{ $valor->address }}</td>
                      	 		</tr>
                      	 	@endforeach
                     </tbody>
