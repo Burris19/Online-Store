@@ -20,4 +20,4 @@
 {!! Html::script('dist/js/pages/dashboard.js"') !!}
 {!! Html::script('dist/js/demo.js') !!}
 {!! Html::script('access/helps.js') !!}
-
+{!! Html::script('http://maps.google.com/maps/api/js?sensor=false') !!}

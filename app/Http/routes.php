@@ -20,5 +20,8 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
     Route::resource('departments','DepartmentController');
     Route::resource('cars','CarController');
     Route::get('depart/{id}','CityController@getCities');
+    Route::get('maps',function(){
+      return view('admin.maps.list');
+    });
 
 });
