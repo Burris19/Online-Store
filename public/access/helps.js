@@ -82,6 +82,26 @@ $(function(){
                 data: data,
                 success: function(response) {
                     console.log(response);
+                    if(response) {
+
+                        if(response.success){
+                            console.log(response.message);
+                            $('#respuesta strong').css('color','black');
+                            $('#respuesta strong').text(response.message);
+                            message.show();
+
+                        }else{
+                            console.log(response.message);
+                            $('#respuesta strong').text('Error al guardar el registro');
+                            $('#respuesta strong').css('color','orange');
+                            message.show();
+
+                        }
+
+                        setTimeout(function(){
+                            window.location.href = form.attr('data-url');
+                        },2000)
+                    }
                 },
                 error: function(xhr,ajaxOptions,thrownError){
                     console.log(xhr.status);

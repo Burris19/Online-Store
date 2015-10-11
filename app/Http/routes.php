@@ -21,5 +21,13 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
     Route::resource('cars','CarController');
     Route::get('depart/{id}','CityController@getCities');
 
-
 });
+
+
+
+
+    Route::get('/',function(){
+        return view('e-comer._base.home.layout');
+    });
+
+
