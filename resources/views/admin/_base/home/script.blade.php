@@ -20,4 +20,5 @@
 {!! Html::script('dist/js/pages/dashboard.js"') !!}
 {!! Html::script('dist/js/demo.js') !!}
 {!! Html::script('access/helps.js') !!}
-
+{!! Html::script('https://cdn.datatables.net/r/dt/dt-1.10.9/datatables.min.js') !!}
+/datatables.min.js"></script>

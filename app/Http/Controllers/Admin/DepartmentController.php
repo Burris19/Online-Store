@@ -24,25 +24,9 @@ class DepartmentController extends CRUDController
     }
     public function store(Request $request)
     {
-        $data =$request->all();
-        $department = array();
-        $city = array();
-        $id_department = 0;
-        foreach( $data['cells'] as $key => $value)
-        {
-            if($key == 1)
-            {
-                $department['description'] = $value;
-                $record = $this->repo->create($department);
-                $id_department = $record->id;
-            }
-            if($key == 2)
-            {
-                $city['description'] = $value;
-                $city['id_department'] = $id_department;
-                $this->cityRepo->create($city);
-            }
-        }
+        $data = $request->all();
+
+        return $data;
     }
 
 

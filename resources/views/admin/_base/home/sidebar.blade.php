@@ -17,7 +17,7 @@
       <a href="stores">
         <i class="fa fa-home"></i> <span>Tiendas</span>
       </a>
-      <a href="departaments">
+      <a href="departments">
         <i class="fa fa-map-marker"></i> <span>Departamentos</span>
       </a>
       <a href="cars">

@@ -36,10 +36,15 @@
                             </div>
                             <div class="box-body">
                                 <table class="table table-bordered" id="municipios">
-                                    <tr>
-                                      <td style="width:10px">#</td>
-                                      <td>Municipio</td>
-                                    </tr>
+                                    <thead>
+                                        <tr>
+                                          <td style="width:10px">#</td>
+                                          <td>Municipio</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

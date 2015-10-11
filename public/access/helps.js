@@ -55,7 +55,8 @@ $(function(){
         if (e.keyCode == 13 ) {
             dato = $("#addCity").val();
             indice++;
-            $('.table tr:last').after('<tr><td>' + indice +' </td> <td> ' + dato + '</td></tr>');
+            $('.table tbody').append('<tr><td>' + indice +' </td> <td class="tdValue"> ' + dato + '</td></tr>');
+            $(this).val('');
         }
     });
 
@@ -63,31 +64,31 @@ $(function(){
         Guardar los departamentos
      */
       $('#btn-save2').on('click',function(e){
-            //$(this).prop('disabled',true);
-            var form = $('#form-create');
-            var cells = new Array();
-            cells.push('name_department' , $('#depto').val());
-            $('#municipios tr td').each(function(){
-                cells.push($(this).html());
-            });
+          var cells = new Array();
 
-            $.ajax({
-               headers: {
-                   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-               },
-               url: form.attr('data-url'),
-                type: form.prop('method'),
-                dataType   : 'json',
-                contentType: 'application/json; charset=UTF-8',
-                data: JSON.stringify({ cells : cells }),
-               success: function(response) {
-                   console.log(response);
-               },
-               error: function(xhr,ajaxOptions,thrownError){
-                   console.log(xhr.status);
-                   console.error(thrownError);
-               }
-            });
+          $('#municipios tbody tr .tdValue').each(function()
+          {
+              cells.push($(this).html());
+          });
+
+          var form = $('#form-create');
+
+          $.ajax({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              },
+              url: form.attr('data-url'),
+              type: form.prop('method'),
+              data: cells,
+              success: function(response) {
+              console.log(response);
+              },
+              error: function(xhr,ajaxOptions,thrownError){
+              console.log(xhr.status);
+              console.error(thrownError);
+              }
+          });
+
       });
 
     //var idDepartment = $('#idDepartment').val();
@@ -124,3 +125,7 @@ $(function(){
 
 
 });
+/**
+dataType   : 'json',
+contentType: 'application/json; charset=UTF-8',
+*/
