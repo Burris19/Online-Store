@@ -10,10 +10,6 @@
             </div><!-- /.box-header -->
             <!-- form start -->
             {!! Form::open( [ 'method' => 'post' , 'id' => 'form-create', 'class' => 'form-horizontal', 'data-url' => 'departments' ]) !!}
-
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <meta name="csrf-token" content="{{ csrf_token() }}" />
-
                 <div class="box-body">
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Departamento</label>

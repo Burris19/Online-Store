@@ -63,31 +63,31 @@ $(function(){
     /*
         Guardar los departamentos
      */
-      $('#btn-save2').on('click',function(e){
-          var cells = new Array();
+        $('#btn-save2').on('click',function(e){
+            var form = $('#form-create');
+            var municipios = $.map($('.tdValue'), function(value, key){
+                return $(value).html()
+            });
 
-          $('#municipios tbody tr .tdValue').each(function()
-          {
-              cells.push($(this).html());
-          });
+            var departamento = $('#depto').val();
 
-          var form = $('#form-create');
+            var data = {
+                municipios: municipios,
+                departamento: departamento,
+            }
 
-          $.ajax({
-              headers: {
-                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-              },
-              url: form.attr('data-url'),
-              type: form.prop('method'),
-              data: cells,
-              success: function(response) {
-              console.log(response);
-              },
-              error: function(xhr,ajaxOptions,thrownError){
-              console.log(xhr.status);
-              console.error(thrownError);
-              }
-          });
+            $.ajax({
+                url: form.attr('data-url'),
+                type: form.prop('method'),
+                data: data,
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(xhr,ajaxOptions,thrownError){
+                    console.log(xhr.status);
+                    console.error(thrownError);
+                }
+            });
 
       });
 

@@ -26,7 +26,29 @@ class DepartmentController extends CRUDController
     {
         $data = $request->all();
 
-        return $data;
+        // Create department
+        $name_department = $data['departamento'];
+
+        $department = $this->repo->findByField('description', $name_department);
+
+        if(!$department) {
+            $department = $this->repo->create([
+                'description' => $name_department
+            ]);
+        }
+
+        // Create cities
+        $cities = [];
+        foreach($data['municipios'] as $key => $value) {
+            $cities[] = $this->cityRepo->create([
+                'description' => $value,
+                'id_department' => $department->id
+            ]);
+        }
+
+
+
+        return compact('department', 'cities');
     }
 
 
