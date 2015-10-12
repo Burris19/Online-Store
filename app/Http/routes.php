@@ -24,5 +24,13 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
       return view('admin.maps.list');
     });
 
-
 });
+
+
+
+
+    Route::get('/',function(){
+        return view('e-comer._base.home.layout');
+    });
+
+

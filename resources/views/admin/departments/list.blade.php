@@ -10,38 +10,30 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-                <div class="box-header">
-
-                </div><!-- /.box-header -->
-                  {!! Form::open( [ 'method' => 'post' , 'id' => 'form-create', 'class' => 'form-horizontal', 'data-url' => 'departments' ]) !!}
-                <div class="container">
-                    {!! Form::select('description', $data , null , ['placeholder' => 'Seleccione el Departamento', 'class' => 'form-control']) !!}
-                </div>
-                <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
                     <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Descripcion</th>
-                      </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Descripcion</th>
+                        </tr>
                     </thead>
                     <tbody>
-   	 	                  @foreach($data as $key=> $valor)
-   	 		                   <tr>
-                     	 			<td>{{ $key + 1}}</td>
-                     	 			<td>{{ $valor->description}}</td>
-                     	 		</tr>
-                     	 	@endforeach
+                        @foreach($data as $key=> $valor)
+                            <tr>
+                                <td>{{ $key + 1}}</td>
+                                <td>{{ $valor->description}}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
-                  </table>
-                </div>
-                  {!! Form::close() !!}
-              </div>
+                </table>
+            </div>
         </div>
     </div>
+</div>
 @endsection
 
 @section('other-scripts')

@@ -25,30 +25,31 @@ class DepartmentController extends CRUDController
     public function store(Request $request)
     {
         $data = $request->all();
-
-        // Create department
         $name_department = $data['departamento'];
-
         $department = $this->repo->findByField('description', $name_department);
-
-        if(!$department) {
-            $department = $this->repo->create([
-                'description' => $name_department
-            ]);
+        $success = true;
+        $message = "Registro guardado exitosamente";
+        try {
+            if(!$department) {
+                $department = $this->repo->create([
+                    'description' => $name_department
+                ]);
+            }
+            // Create cities
+            $cities = [];
+            foreach($data['municipios'] as $key => $value) {
+                $cities[] = $this->cityRepo->create([
+                    'description' => $value,
+                    'id_department' => $department->id
+                ]);
+            }
+            return compact('success','message');
+        } catch (Exception $e) {
+            return $e;
         }
 
-        // Create cities
-        $cities = [];
-        foreach($data['municipios'] as $key => $value) {
-            $cities[] = $this->cityRepo->create([
-                'description' => $value,
-                'id_department' => $department->id
-            ]);
-        }
 
 
-
-        return compact('department', 'cities');
     }
 
 
