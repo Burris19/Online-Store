@@ -12,14 +12,9 @@
                                   <div class="col-sm-6">
                                       <h5>Categoria</h5>
                                       <ul>
-                                      <li><a href="category.html">T-shirts</a>
-                                      </li>
-                                      <li><a href="category.html">Shirts</a>
-                                      </li>
-                                      <li><a href="category.html">Pants</a>
-                                      </li>
-                                      <li><a href="category.html">Accessories</a>
-                                      </li>
+                                          @foreach ($categories as $value)
+                                              <li><a href="category.html">{{ $value->title }}</a></li>
+                                          @endforeach
                                       </ul>
                                   </div>
 
@@ -70,8 +65,7 @@
         </div>
         </form>
 
-        </div>
-        <!--/.nav-collapse -->
+        </div>        
 
     </div>
     <!-- /.container -->

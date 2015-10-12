@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
     Route::resource('products', 'ProductController');
     Route::resource('providers','ProviderController');
@@ -20,17 +21,8 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
     Route::resource('departments','DepartmentController');
     Route::resource('cars','CarController');
     Route::get('depart/{id}','CityController@getCities');
-    Route::get('maps',function(){
-      return view('admin.maps.list');
-    });
-
 });
 
-
-
-
-    Route::get('/',function(){
-        return view('e-comer._base.home.layout');
-    });
-
-
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::get('/','FrontedController@index');
+});
