@@ -24,4 +24,5 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
       return view('admin.maps.list');
     });
 
+
 });

@@ -5,7 +5,7 @@
       <small>listado</small>
     </h1>
     <ol class="breadcrumb" style="">
-      <button data-root = 'departaments' class="btn btn-block btn-primary btn-sm create">Crear registro</button>
+      <button data-root = 'departments' class="btn btn-block btn-primary btn-sm create">Crear registro</button>
     </ol>
 @endsection
 
@@ -16,7 +16,7 @@
                 <div class="box-header">
 
                 </div><!-- /.box-header -->
-                  {!! Form::open( [ 'method' => 'post' , 'id' => 'form-create', 'class' => 'form-horizontal', 'data-url' => 'departaments' ]) !!}
+                  {!! Form::open( [ 'method' => 'post' , 'id' => 'form-create', 'class' => 'form-horizontal', 'data-url' => 'departments' ]) !!}
                 <div class="container">
                     {!! Form::select('description', $data , null , ['placeholder' => 'Seleccione el Departamento', 'class' => 'form-control']) !!}
                 </div>

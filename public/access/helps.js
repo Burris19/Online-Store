@@ -55,46 +55,39 @@ $(function(){
         if (e.keyCode == 13 ) {
             dato = $("#addCity").val();
             indice++;
-            $('.table tr:last').after('<tr><td>' + indice +' </td> <td> ' + dato + '</td></tr>');
+            $('.table tbody').append('<tr><td>' + indice +' </td> <td class="tdValue"> ' + dato + '</td></tr>');
+            $(this).val('');
         }
     });
 
-      $('#btn-save2').on('click',function(){
-          var cells = new Array();
-           $('#municipios tr td').each(function(){
-               cells.push($(this).html());
-           });
-           var depto = { 'departamento' : $('#depto').val() };
+    /*
+        Guardar los departamentos
+     */
+        $('#btn-save2').on('click',function(e){
+            var form = $('#form-create');
+            var municipios = $.map($('.tdValue'), function(value, key){
+                return $(value).html()
+            });
 
-           $.ajax({
-               url: 'departaments',
-               type: 'post',
-               data: cells.serialize(),
-               success: function(response) {
-                   console.log(response);
-                   if(response) {
+            var departamento = $('#depto').val();
 
-                        if(response.success){
-                           console.log(response);
+            var data = {
+                municipios: municipios,
+                departamento: departamento,
+            }
 
-
-                        }else{
-                            console.log(response);
-
-
-                        }
-
-                   }
-               },
-               error: function(xhr,ajaxOptions,thrownError){
-                   console.log(xhr.status);
-                   console.error(thrownError);
-               }
-           });
-
-
-
-
+            $.ajax({
+                url: form.attr('data-url'),
+                type: form.prop('method'),
+                data: data,
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(xhr,ajaxOptions,thrownError){
+                    console.log(xhr.status);
+                    console.error(thrownError);
+                }
+            });
 
       });
 
@@ -132,3 +125,7 @@ $(function(){
 
 
 });
+/**
+dataType   : 'json',
+contentType: 'application/json; charset=UTF-8',
+*/
