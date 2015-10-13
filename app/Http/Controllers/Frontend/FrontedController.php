@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
 use App\Http\Requests;
 use App\Http\Controllers\Admin\CRUDController;
 use App\Repositories\Category\CategoryRepo;
@@ -10,6 +11,8 @@ use App\Repositories\Product\ProductRepo;
 use App\Repositories\Department\DepartmentRepo;
 use App\Repositories\City\CityRepo;
 use App\Repositories\Client\ClientRepo;
+use App\Repositories\ClientAddress\ClientAddressRepo;
+use Symfony\Component\Debug\ExceptionHandler;
 
 
 class FrontedController extends CRUDController
@@ -19,19 +22,22 @@ class FrontedController extends CRUDController
     protected $departmentRepo;
     protected $cityRepo;
     protected $clientRepo;
+    protected $clientAddressRepo;
 
 
     function __construct(CategoryRepo $categoryRepo,
                          ProductRepo $productRepo,
                          DepartmentRepo $departmentRepo,
                          CityRepo $cityRepo,
-                         ClientRepo $clientRepo)
+                         ClientRepo $clientRepo,
+                         ClientAddressRepo $clientAddressRepo)
     {
           $this->categoryRepo = $categoryRepo;
           $this->productRepo = $productRepo;
           $this->departmentRepo = $departmentRepo;
           $this->cityRepo = $cityRepo;
           $this->clientRepo = $clientRepo;
+          $this->clientAddressRepo = $clientAddressRepo;
     }
 
 
@@ -75,8 +81,21 @@ class FrontedController extends CRUDController
         $success = true;
         $message = "Registro guardado exitosamente";
         $record = null;
-        $record = $this->clientRepo->create($data);
-        return compact('success','message','record','data');
+
+        try
+        {
+            $record = $this->clientRepo->create($data);
+            $data['id_client'] = $record->id;
+            $record = $this->clientAddressRepo->create($data);
+            return compact('success','message','record');
+        }catch (QueryException $e)
+        {
+            $success = false;
+            $message = "Error al guardar el registro";
+            $record = null;
+            return compact('success','message','record');
+        }
+
 
     }
 
