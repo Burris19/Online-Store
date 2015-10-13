@@ -7,3 +7,4 @@
 {!! Html::script('frontend/js/owl.carousel.min.js') !!}
 {!! Html::script('frontend/js/front.js') !!}
 {!! Html::script('frontend/js/respond.min.js') !!}
+

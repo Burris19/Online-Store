@@ -145,7 +145,3 @@ $(function(){
 
 
 });
-/**
-dataType   : 'json',
-contentType: 'application/json; charset=UTF-8',
-*/

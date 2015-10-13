@@ -13,6 +13,7 @@
 
     @include('e-comer._base.home.footer')
     @include('e-comer._base.home.script')
+    @yield('otherScript')
 </div>
 
 </body>
