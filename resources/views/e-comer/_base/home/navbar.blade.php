@@ -21,9 +21,9 @@
                                   <div class="col-sm-6">
                                       <h5>Usuarios</h5>
                                       <ul>
-                                      <li><a href="category.html">Iniciar Session</a>
+                                      <li><a href="login">Iniciar Session</a>
                                       </li>
-                                      <li><a href="category.html">Registrar</a>
+                                      <li><a href="register">Registrar</a>
                                       </li>
                                       </ul>
                                   </div>

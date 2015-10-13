@@ -6,9 +6,9 @@
 <body>
 @include('e-comer._base.home.navbar')
 <div id="all">
+
     <div id="content">
-        @include('e-comer._base.home.carusel')
-        @include('e-comer._base.home.products')
+        @yield('content')
     </div>
 
     @include('e-comer._base.home.footer')
