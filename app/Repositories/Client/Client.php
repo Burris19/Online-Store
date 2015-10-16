@@ -13,21 +13,12 @@ class Client extends Model
           'last_name',
           'phone',
           'email',
-          'nit',
-          'valoration',
-          'password'
+          'id_user'
       ];
 
-      protected $hidden = [
-          'password'
-      ];
-
-      public function setPasswordAttribute($value)
+      public function getFullNameAttribute()
       {
-          if(!empty($value))
-          {
-              $this->attributes['password'] = bcrypt($value);
-          }
+          return $this->name . ' ' . $this->last_name;
       }
 
 }

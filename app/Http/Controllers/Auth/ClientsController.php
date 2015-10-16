@@ -5,11 +5,14 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Client\ClientRepo;
+use App\Repositories\User\UserRepo;
+use App\Repositories\ClientAddress\ClientAddressRepo;
 
 class ClientsController extends Controller
 {
     protected $userRepo = null;
     protected $clientRepo = null;
+    protected $clientAddressRepo;
 
     protected $rulesClient = [
         'name' => 'required',
@@ -24,15 +27,20 @@ class ClientsController extends Controller
     ];
 
 
-    public function __construct(ClientRepo $clientRepo)
+    public function __construct(ClientRepo $clientRepo,
+                                UserRepo $userRepo,
+                                ClientAddressRepo $clientAddressRepo)
     {
         $this->clientRepo = $clientRepo;
+        $this->userRepo = $userRepo;
+        $this->clientAddressRepo = $clientAddressRepo;
     }
 
     public function postRegister(Request $request)
     {
         $dataClient = $request->only('name', 'last_name', 'phone', 'email');
         $dataUser = $request->only('email', 'password');
+        $dataClientAddress = $request->only('id_city','address');
 
         $validator = \Validator::make($dataClient, $this->rulesClient);
 
@@ -40,18 +48,16 @@ class ClientsController extends Controller
             try {
                 \DB::beginTransaction();
 
-                // Save data of client and generate user
+                $dataUser['name'] = $dataClient['name'] . ' '. $dataClient['last_name'];
+                $dataUser['type'] = 'client';
                 $user = $this->userRepo->create($dataUser);
 
-                //$client = $this->clientRepo->create($dataClient);
-/*
-                $dataUser['name'] = $client->full_name;
-                $dataUser['type'] = 'client';
+                $dataClient['id_user'] = $user->id;
+                $client = $this->clientRepo->create($dataClient);
 
+                $dataClientAddress['id_client'] = $client->id;
+                $clientAddress = $this->clientAddressRepo->create($dataClientAddress);
 
-                $client->id_user = $user->id;
-                $client->save();
-*/
                 $code = 201;
                 $message = "Client registered successfully";
 

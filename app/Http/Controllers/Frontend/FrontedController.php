@@ -77,36 +77,4 @@ class FrontedController extends CRUDController
         return $data->lists('description','id');
     }
 
-    public function addRegister(Request $request)
-    {
-        $data = $request->all();
-
-        $success = true;
-        $message = "Registro guardado exitosamente";
-        $record = null;
-
-        try
-        {
-            $record = $this->clientRepo->create($data);
-            $data['id_client'] = $record->id;
-            $record = $this->clientAddressRepo->create($data);
-            return compact('success','message','record');
-        }catch (QueryException $e)
-        {
-            $success = false;
-            $message = "Error al guardar el registro";
-            $record = null;
-            return compact('success','message','record');
-        }
-
-
-    }
-
-    public  function postLogin(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
-
-        return $credentials;
-
-    }
 }

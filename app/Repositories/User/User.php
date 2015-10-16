@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Repositories\User;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -28,7 +28,12 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'type'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -36,4 +41,14 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    // Attributes
+    public function setPasswordAttribute($value)
+    {
+        if(! empty($value)) {
+            $this->attributes['password'] = \Hash::make($value);
+        }
+    }
+
+
 }
