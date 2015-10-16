@@ -75,4 +75,5 @@
 @section('otherScript')
     {!! Html::script('access/helps.js') !!}
     {!! Html::script('access/mapsRegister.js') !!}
+    <!-- {!! Html::script('access/directions.js') !!} -->
 @endsection
