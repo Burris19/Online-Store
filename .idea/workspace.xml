@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc95f3cb-f30f-4fab-bf23-c8a3c2ba1a53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Repositories/User/UserRepo.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Models/User.php" afterPath="$PROJECT_DIR$/app/Repositories/User/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_09_28_173525_create_client_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_09_28_173525_create_client_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/Client/Client.php" afterPath="$PROJECT_DIR$/app/Repositories/Client/Client.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ClientsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ClientsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/FrontedController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/FrontedController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/e-comer/register/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/e-comer/register/register.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,24 +31,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FrontedController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Frontend/FrontedController.php">
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/e-comer/register/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667">
-              <caret line="58" column="25" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.4741036">
+              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ClientsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.555555">
+              <caret line="155" column="33" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="33" />
               <folding>
-                <element signature="e#49#77#0#PHP" expanded="true" />
+                <element signature="e#45#73#0#PHP" expanded="true" />
+                <element signature="e#773#1091#0#PHP" expanded="false" />
+                <element signature="e#1097#2744#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58243454">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.6666665">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticatesAndRegistersUsers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.6666665">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticatesUsers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.962963">
+              <caret line="104" column="5" selection-start-line="103" selection-start-column="0" selection-end-line="108" selection-end-column="5" />
+              <folding>
+                <element signature="e#46#74#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Repositories/Provider/Provider.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Provider/ProviderRepo.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Base/BaseInterface.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Base/BaseRepo.php" />
@@ -96,7 +125,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/StoreController.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Client/ClientRepo.php" />
         <option value="$PROJECT_DIR$/app/Repositories/ClientAddress/ClientAddress.php" />
-        <option value="$PROJECT_DIR$/resources/views/e-comer/register/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Repositories/ClientAddress/ClientAddressRepo.php" />
         <option value="$PROJECT_DIR$/resources/views/e-comer/login/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Repositories/UserRepo/UserRepo.php" />
@@ -112,9 +140,12 @@
         <option value="$PROJECT_DIR$/app/Repositories/User/User.php" />
         <option value="$PROJECT_DIR$/app/Repositories/Client/Client.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_09_28_173525_create_client_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/ClientsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/FrontedController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/config/auth.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/ClientsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/e-comer/register/register.blade.php" />
       </list>
     </option>
   </component>
@@ -135,10 +166,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1676" />
-    <option name="y" value="38" />
-    <option name="width" value="1433" />
-    <option name="height" value="797" />
+    <option name="x" value="1599" />
+    <option name="width" value="1602" />
+    <option name="height" value="901" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -191,7 +221,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,11 +235,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -227,7 +253,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Repositories" />
+              <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -245,11 +271,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Repositories" />
+              <option name="myItemId" value="Http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Client" />
+              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -264,6 +290,18 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -276,7 +314,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../taipak/API" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="fro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;rout&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;fron&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;clie&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_173525_create_client_table.php&#10;regis&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/register/register.blade.php&#10;hel&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;dia&#9;FILE&#9;file:///home/julian/Code/store/docs/diagram_tres.png&#10;route&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;rou&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;AuthenticatesUsers&#9;null&#9;null&#10;AuthenticatesAndRegistersUsers&#9;null&#9;null&#10;he&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;clientA&#9;null&#9;null&#10;regi&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/register/register.blade.php&#10;depar&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/DepartmentController.php&#10;crud&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;fr&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;create&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;crea&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;cre&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;cityC&#9;null&#9;null&#10;depa&#9;null&#9;null&#10;Sto&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/StoreController.php&#10;departme&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_171649_create_department_table.php&#10;front&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;address&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_175214_create_client_address_table.php&#10;diag&#9;FILE&#9;file:///home/julian/Code/store/docs/diagram_tres.png&#10;ro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;routes&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;helps&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;crudc&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;side&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/_base/home/sidebar.blade.php&#10;kernel&#9;FILE&#9;file:///home/julian/Code/store/vendor/symfony/http-kernel/Kernel.php&#10;cr&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;productC&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/ProductController.php&#10;cru&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;list&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/products/list.blade.php&#10;script&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/_base/home/script.blade.php&#10;lis&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/products/list.blade.php&#10;create_pro&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_25_221640_create_product_table.php&#10;create_pr&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_25_221640_create_product_table.php&#10;pro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/ProductController.php&#10;prod&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/ProductController.php" />
+    <property name="SearchEverywhereHistoryKey" value="regi&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/register/register.blade.php&#10;authenticateus&#9;FILE&#9;file:///home/julian/Code/store/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php&#10;Authenticatea&#9;FILE&#9;file:///home/julian/Code/store/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php&#10;fro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;rout&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;fron&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;clie&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_173525_create_client_table.php&#10;regis&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/register/register.blade.php&#10;hel&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;dia&#9;FILE&#9;file:///home/julian/Code/store/docs/diagram_tres.png&#10;route&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;rou&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;AuthenticatesUsers&#9;null&#9;null&#10;AuthenticatesAndRegistersUsers&#9;null&#9;null&#10;he&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;clientA&#9;null&#9;null&#10;depar&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/DepartmentController.php&#10;crud&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;fr&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;create&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;crea&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;cre&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;cityC&#9;null&#9;null&#10;depa&#9;null&#9;null&#10;Sto&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/StoreController.php&#10;departme&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_171649_create_department_table.php&#10;front&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;address&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_175214_create_client_address_table.php&#10;diag&#9;FILE&#9;file:///home/julian/Code/store/docs/diagram_tres.png&#10;ro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;routes&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;helps&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;crudc&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;side&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/_base/home/sidebar.blade.php&#10;kernel&#9;FILE&#9;file:///home/julian/Code/store/vendor/symfony/http-kernel/Kernel.php&#10;cr&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;productC&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/ProductController.php&#10;cru&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;list&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/products/list.blade.php&#10;script&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/_base/home/script.blade.php&#10;lis&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/products/list.blade.php&#10;create_pro&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_25_221640_create_product_table.php&#10;create_pr&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_25_221640_create_product_table.php&#10;pro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/ProductController.php&#10;prod&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/ProductController.php" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
@@ -333,7 +371,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1676" y="38" width="1433" height="797" extended-state="0" />
+    <frame x="1599" y="0" width="1602" height="901" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -343,7 +381,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33542976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.030625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -394,20 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/e-comer/_base/home/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/e-comer/_base/home/style.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53114754">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/e-comer/_base/home/products.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -569,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49117175">
@@ -594,13 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0032102729">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1829855">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -639,14 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05778491">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11556982">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -690,14 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/e-comer/register/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667">
-          <caret line="14" column="118" selection-start-line="14" selection-start-column="110" selection-end-line="14" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/access/helps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -719,14 +713,6 @@
           <folding>
             <element signature="e#41#77#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.086677365">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,19 +748,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ClientsController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52696455">
-          <caret line="55" column="23" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="23" />
-          <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-12.666667">
+          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Frontend/FrontedController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667">
+        <state vertical-scroll-proportion="0.38247013">
           <caret line="58" column="25" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="25" />
           <folding>
             <element signature="e#49#77#0#PHP" expanded="true" />
@@ -782,10 +766,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58243454">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.0996016">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0199203">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31075698">
+          <caret line="13" column="10" selection-start-line="11" selection-start-column="0" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.962963">
+          <caret line="104" column="5" selection-start-line="103" selection-start-column="0" selection-end-line="108" selection-end-column="5" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ClientsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.555555">
+          <caret line="155" column="33" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="33" />
+          <folding>
+            <element signature="e#45#73#0#PHP" expanded="true" />
+            <element signature="e#773#1091#0#PHP" expanded="false" />
+            <element signature="e#1097#2744#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/e-comer/register/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4741036">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding />
         </state>
       </provider>

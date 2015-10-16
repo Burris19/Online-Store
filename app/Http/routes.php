@@ -33,6 +33,7 @@ Route::group(['namespace' => 'Frontend'], function () {
 
 
 Route::post('register','Auth\ClientsController@postRegister');
+Route::post('login','Auth\ClientsController@postLogin');
 
 
 
