@@ -14,7 +14,6 @@ $(function(){
         var tipo = form.prop('method');
         var url = form.attr('data-url');
         var data = form.serialize();
-
         $.ajax({
             url: url,
             type: tipo,
@@ -28,7 +27,6 @@ $(function(){
                          $('#respuesta strong').css('color','black');
                          $('#respuesta strong').text(response.message);
                          message.show();
-
                      }else{
                          console.log(response.message);
                          $('#respuesta strong').text('Error al guardar el registro');
@@ -36,7 +34,6 @@ $(function(){
                          message.show();
 
                      }
-
                     setTimeout(function(){
                         window.location.href = url;
                     },2000)
@@ -60,58 +57,53 @@ $(function(){
         }
     });
 
-    /*
-        Guardar los departamentos
-     */
-        $('#btn-save2').on('click',function(e){
-            var form = $('#form-create');
-            var municipios = $.map($('.tdValue'), function(value, key){
-                return $(value).html()
-            });
+    $('#btn-save2').on('click',function(e){
+        var form = $('#form-create');
+        var municipios = $.map($('.tdValue'), function(value, key){
+            return $(value).html()
+        });
 
-            var departamento = $('#depto').val();
+        var departamento = $('#depto').val();
 
-            var data = {
-                municipios: municipios,
-                departamento: departamento,
-            }
+        var data = {
+            municipios: municipios,
+            departamento: departamento,
+        }
 
-            $.ajax({
-                url: form.attr('data-url'),
-                type: form.prop('method'),
-                data: data,
-                success: function(response) {
-                    console.log(response);
-                    if(response) {
+        $.ajax({
+            url: form.attr('data-url'),
+            type: form.prop('method'),
+            data: data,
+            success: function(response) {
+                console.log(response);
+                if(response) {
 
-                        if(response.success){
-                            console.log(response.message);
-                            $('#respuesta strong').css('color','black');
-                            $('#respuesta strong').text(response.message);
-                            message.show();
+                    if(response.success){
+                        console.log(response.message);
+                        $('#respuesta strong').css('color','black');
+                        $('#respuesta strong').text(response.message);
+                        message.show();
 
-                        }else{
-                            console.log(response.message);
-                            $('#respuesta strong').text('Error al guardar el registro');
-                            $('#respuesta strong').css('color','orange');
-                            message.show();
+                    }else{
+                        console.log(response.message);
+                        $('#respuesta strong').text('Error al guardar el registro');
+                        $('#respuesta strong').css('color','orange');
+                        message.show();
 
-                        }
-
-                        setTimeout(function(){
-                            window.location.href = form.attr('data-url');
-                        },2000)
                     }
-                },
-                error: function(xhr,ajaxOptions,thrownError){
-                    console.log(xhr.status);
-                    console.error(thrownError);
+
+                    setTimeout(function(){
+                        window.location.href = form.attr('data-url');
+                    },2000)
                 }
-            });
+            },
+            error: function(xhr,ajaxOptions,thrownError){
+                console.log(xhr.status);
+                console.error(thrownError);
+            }
+        });
 
-      });
-
-    //var idDepartment = $('#idDepartment').val();
+    });
 
     $('#idDepartment').change(function(){
         var id = $(this).val();
@@ -141,6 +133,27 @@ $(function(){
             }
         });
     }
+
+    $('#login').on('click',function(e){
+        e.preventDefault();
+        $(this).prop('disabled',true);
+        var form = $('#form-login');
+        var tipo = form.prop('method');
+        var url = form.attr('data-url');
+        var data = form.serialize();
+        $.ajax({
+            url: url,
+            type: tipo,
+            data: data,
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.status);
+                console.error(thrownError);
+            }
+        });
+    });
 
 
 

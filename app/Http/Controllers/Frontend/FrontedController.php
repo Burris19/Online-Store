@@ -13,6 +13,9 @@ use App\Repositories\City\CityRepo;
 use App\Repositories\Client\ClientRepo;
 use App\Repositories\ClientAddress\ClientAddressRepo;
 use Symfony\Component\Debug\ExceptionHandler;
+use Illuminate\Support\Facades\Auth;
+
+
 
 
 class FrontedController extends CRUDController
@@ -99,4 +102,11 @@ class FrontedController extends CRUDController
 
     }
 
+    public  function postLogin(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        return $credentials;
+
+    }
 }

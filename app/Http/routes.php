@@ -25,10 +25,13 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
 
 Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/','FrontedController@index');
-    Route::get('login','FrontedController@login');
     Route::get('register','FrontedController@register');
-    Route::post('register','FrontedController@addRegister');
     Route::get('depart/{id}','FrontedController@getCities');
-
+    Route::get('auth/login', 'Auth\AuthController@getLogin');
 });
+
+
+Route::post('register','Auth\ClientsController@postRegister');
+
+
 

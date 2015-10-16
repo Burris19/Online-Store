@@ -15,7 +15,7 @@
 
                 <hr>
 
-                {!!Form::open([ 'method' => 'post', 'id'=>'form-create','class'=>'form-horizontal','data-url' => 'register'])!!}
+                {!!Form::open([ 'method' => 'post', 'id'=>'form-login','class'=>'form-horizontal','data-url' => 'login'])!!}
                     <div class="form-group">
                         {!! Form::label('email') !!}
                         {!! Form::email('email',null,['class' => 'form-control', 'placeholder' => 'Ingresa tu correo']) !!}
