@@ -13,8 +13,9 @@ $(function() {
 
         navigator.geolocation.getCurrentPosition(function(posicion){
             var geolocalizacion = new google.maps.LatLng(posicion.coords.latitude,posicion.coords.longitude);
+            var geolocalizacion3 = new google.maps.LatLng(14.8333,-91.51667);
             var geolocalizacion2=new google.maps.LatLng(14.53333,-91.68333);
-
+//14.53333,-91.68333
             mapa.setCenter(geolocalizacion);
 
             var directionsDisplay = new google.maps.DirectionsRenderer({
@@ -23,7 +24,7 @@ $(function() {
 
             // Set destination, origin and travel mode.
             var request = {
-              destination: geolocalizacion,
+              destination: geolocalizacion3,
               origin: geolocalizacion2,
               travelMode: google.maps.TravelMode.DRIVING
             };
