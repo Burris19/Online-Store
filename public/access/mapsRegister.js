@@ -24,7 +24,7 @@ $(function() {
 
             // Set destination, origin and travel mode.
             var request = {
-              destination: geolocalizacion3,
+              destination: geolocalizacion,
               origin: geolocalizacion2,
               travelMode: google.maps.TravelMode.DRIVING
             };
