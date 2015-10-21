@@ -146,7 +146,15 @@ $(function(){
             type: tipo,
             data: data,
             success: function (response) {
-                console.log(response);
+                if(response.status){
+                    window.location.href = '/';
+
+                }else{
+                    $('#respuesta strong').text('Email o Password incorrectos');
+                    $('#respuesta strong').css('color','orange');
+                    message.show();
+                    $(this).prop('disabled',false);
+                }
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(xhr.status);

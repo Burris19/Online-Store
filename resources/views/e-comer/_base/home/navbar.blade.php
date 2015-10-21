@@ -21,10 +21,17 @@
                                   <div class="col-sm-6">
                                       <h5>Usuarios</h5>
                                       <ul>
-                                      <li><a href="login">Iniciar Session</a>
-                                      </li>
-                                      <li><a href="register">Registrar</a>
-                                      </li>
+                                          @if (Auth::guest())
+                                              <li><a href="login">Iniciar Session</a>
+                                              </li>
+                                              <li><a href="register">Registrar</a>
+                                              </li>
+                                          @else
+                                              <li>
+                                                  Hola {{ Auth::user()->name }}
+                                              </li>
+                                              <li><a href="{{route('logout')}}">Cerrar Session</a></li>
+                                          @endif
                                       </ul>
                                   </div>
                               </div>

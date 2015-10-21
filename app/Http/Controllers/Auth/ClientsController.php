@@ -117,11 +117,12 @@ class ClientsController extends Controller
             $this->incrementLoginAttempts($request);
         }
 
-        return redirect($this->loginPath())
+        return ['status' => false  ];
+            /*redirect($this->loginPath())
             ->withInput($request->only($this->loginUsername(), 'remember'))
             ->withErrors([
                 $this->loginUsername() => $this->getFailedLoginMessage(),
-            ]);
+            ]);*/
     }
 
     public function loginPath()
@@ -156,7 +157,7 @@ class ClientsController extends Controller
             return $this->authenticated($request, Auth::user());
         }
 
-        return redirect()->intended($this->redirectPath());
+        return ['status' => true ];
     }
 
 
