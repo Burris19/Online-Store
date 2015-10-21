@@ -8,6 +8,7 @@ $(function(){
     });
 
     $('#btn-save').on('click',function(e){
+      alert('hola');
         e.preventDefault();
         $('#btn-save').prop('disabled',true);
         var form = $('#form-create');
