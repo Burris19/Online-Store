@@ -48,12 +48,12 @@
 @endsection
 
 @section('other-scripts')
-  {!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
-  {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}
-  {!! Html::style('plugins/datatables/dataTables.bootstrap.css') !!}
-  <script>
-    $(function () {
-       $("#example1").DataTable();
-    });
-  </script>
+      {!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
+      {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}
+      {!! Html::style('plugins/datatables/dataTables.bootstrap.css') !!}
+      <script>
+        $(function () {
+           $("#example1").DataTable();
+        });
+      </script>
 @endsection

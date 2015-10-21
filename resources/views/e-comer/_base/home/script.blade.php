@@ -8,3 +8,5 @@
 {!! Html::script('frontend/js/front.js') !!}
 {!! Html::script('frontend/js/respond.min.js') !!}
 {!! Html::script('http://maps.googleapis.com/maps/api/js?&sensor=true') !!}
+{!! Html::script('access/helpsFrontend.js') !!}
+

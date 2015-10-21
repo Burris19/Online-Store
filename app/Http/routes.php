@@ -28,6 +28,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('login','FrontedController@login');
     Route::get('register','FrontedController@register');
     Route::get('depart/{id}','FrontedController@getCities');
+    Route::get('detail/{id}','FrontedController@getDetail');
 
 });
 

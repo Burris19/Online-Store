@@ -1,5 +1,4 @@
 $(function(){
-
     var message = $('#respuesta');
     message.hide();
     $('.create').on('click',function(){

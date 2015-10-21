@@ -77,4 +77,11 @@ class FrontedController extends CRUDController
         return $data->lists('description','id');
     }
 
+    public function getDetail($id)
+    {
+        $data = $this->productRepo->findOrFail($id);
+        return view('e-comer.products.detail',compact('data'));
+
+    }
+
 }
