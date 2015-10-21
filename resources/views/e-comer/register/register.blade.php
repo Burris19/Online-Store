@@ -57,7 +57,7 @@
                         {!! Form::text('address',null,['class' => 'form-control']) !!}
                     </div>
                     <div class="text-center">
-                        <button type="button" id="btn-save" class="btn btn-primary"><i class="fa fa-user"></i>Registrar</button>
+                        <button type="button" id="btn-register" class="btn btn-primary"><i class="fa fa-user"></i>Registrar</button>
                     </div>
                 {!! Form::close() !!}
             </div>

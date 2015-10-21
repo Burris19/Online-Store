@@ -61,7 +61,8 @@ class ClientsController extends Controller
                 $clientAddress = $this->clientAddressRepo->create($dataClientAddress);
 
                 $code = 201;
-                $message = "Client registered successfully";
+                $message = "Cliente Registrado Corectamente";
+                $success = true;
 
                 \DB::commit();
 
@@ -72,7 +73,8 @@ class ClientsController extends Controller
                 \DB::rollback();
 
                 $code = 500;
-                $message = 'An error has ocurred when try register the client';
+                $success = false;
+                $message = 'Error al registrar';
 
                 return response()
                     ->json(compact('success', 'message'), $code);
@@ -125,6 +127,11 @@ class ClientsController extends Controller
             ]);*/
     }
 
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
     public function loginPath()
     {
         return property_exists($this, 'redirectTo') ? $this->redirectTo : 'login';

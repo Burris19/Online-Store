@@ -31,13 +31,14 @@ Route::group(['namespace' => 'Frontend'], function () {
 
 });
 
-
 Route::post('register','Auth\ClientsController@postRegister');
 Route::post('login','Auth\ClientsController@postLogin');
 Route::get('logout',[
-    'uses' => 'Auth\ClientsController@postLogin',
+    'uses' => 'Auth\ClientsController@getLogout',
     'as' => 'logout'
 ]);
+
+
 
 
 

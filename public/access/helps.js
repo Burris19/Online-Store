@@ -8,7 +8,6 @@ $(function(){
     });
 
     $('#btn-save').on('click',function(e){
-      alert('hola');
         e.preventDefault();
         $('#btn-save').prop('disabled',true);
         var form = $('#form-create');
@@ -165,5 +164,43 @@ $(function(){
     });
 
 
+
+    $('#btn-register').on('click',function(e){
+        e.preventDefault();
+        $('#btn-register').prop('disabled',true);
+        var form = $('#form-create');
+        var tipo = form.prop('method');
+        var url = form.attr('data-url');
+        var data = form.serialize();
+        $.ajax({
+            url: url,
+            type: tipo,
+            data: data,
+            success: function(response) {
+                debugger
+                if(response) {
+                    $('#btn-register').prop('disabled',true);
+                    if(response.success){
+                        $('#respuesta strong').css('color','black');
+                        $('#respuesta strong').text(response.message);
+                        message.show();
+                        setTimeout(function(){
+                            window.location.href = '/login';
+                        },2000)
+
+                    }else{
+                        $('#respuesta strong').text('Error al guardar el registro');
+                        $('#respuesta strong').css('color','orange');
+                        message.show();
+
+                    }
+                }
+            },
+            error: function(xhr,ajaxOptions,thrownError){
+                console.log(xhr.status);
+                console.error(thrownError);
+            }
+        });
+    });
 
 });
