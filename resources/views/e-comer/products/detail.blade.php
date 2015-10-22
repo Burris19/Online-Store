@@ -18,11 +18,10 @@
                     <h1 class="text-center">{{ $data['title'] }}</h1>
                     <p class="price">{{ $data['price'] }}</p>
                     <p class="text-center buttons">
-                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                        <a href="basket.html" class="btn btn-default"><i class="fa fa-heart"></i> Add to wishlist</a>
+                        <button class="btn btn-primary" ><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+                        <button type="button" class="btn btn-default" >Agregar a mis Favoritos</button>
                     </p>
                 </div>
-
                 <div class="row" id="thumbs">
                     <div class="col-xs-4">
                         <a href="{{ $data['image'] }}" class="thumb">
@@ -42,16 +41,11 @@
                 </div>
             </div>
         </div>
-
         <div class="box" id="details">
             <blockquote>
                 <p><em>{{ $data['description'] }}</em>
                 </p>
             </blockquote>
         </div>
-
-
-
     </div>
-    <!-- /.col-md-9 -->
 </div>
