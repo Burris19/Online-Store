@@ -11,40 +11,23 @@
                 <h1>Carrito de compras</h1>
                 <p class="text-muted">Actualmente tienes 3 artículo (s) en su carrito</p>
                 <div class="table-responsive">
-                    <table class="table">
+                    <table class="table" id="tableBuy">
                         <thead>
                         <tr>
-                            <th colspan="2">Producto</th>
+                            <th>Producto</th>
                                 <th>Cantidad</th>
                                 <th>Precio Unitario</th>
                                 <th>Descuento</th>
-                                <th colspan="2">Total</th>
+                                <th>Total</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                    <img src="img/detailsquare.jpg" alt="White Blouse Armani">
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">White Blouse Armani</a>
-                                </td>
-                                <td>
-                                    <input type="number" value="2" class="form-control">
-                                </td>
-                                <td>$123.00</td>
-                                <td>$0.00</td>
-                                <td>$246.00</td>
-                                <td><a href="#"><i class="fa fa-trash-o"></i></a>
-                                </td>
-                            </tr>
+
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th colspan="5">Total</th>
-                                <th colspan="2">$446.00</th>
+                                <th colspan="4">Total</th>
+                                <th>$446.00</th>
                             </tr>
                         </tfoot>
                     </table>
@@ -98,4 +81,4 @@
 
 
 </div>
-
+{!! Html::script('access/helpsFrontend.js') !!}

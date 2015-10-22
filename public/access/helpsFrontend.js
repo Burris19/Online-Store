@@ -19,8 +19,9 @@ $(function(){
         pedido.id = $(this).data('id');
         functions.fill();
         functions.validateAction($(this).data('id'));
-
-         // $('#content').load('shoppingCart');
+        $('#content').load('shoppingCart',function(){
+            functions.fillTable();
+        });
     });
 
     var Contacts = {
@@ -54,7 +55,7 @@ $(function(){
             pedido.price = $('[name=price]').text();
             pedido.total = functions.total(pedido.price,pedido.quantity);
             functions.updateItems();
-        },
+          },
         updateItems : function(){
             var items = localStorage.length;
             $('.items').text(items);
@@ -70,9 +71,25 @@ $(function(){
                 localStorage.setItem( ''+id , JSON.stringify(object) );
 
             }
+        },
+
+        fillTable: function(){
+          //debugger
+          for ( var i = 0, len = localStorage.length; i < len; ++i )
+          {
+            var object =JSON.parse(localStorage.getItem(localStorage.key(i)));
+            console.log(object);
+
+            $('.table tbody').append('<tr>'+
+                                      '<td>'+object.name+'</td>'+
+                                      '<td><input type="number" value='+object.quantity+' class="form-control" width=100></td>'+
+                                      '<td>'+object.price+'</td>'+
+                                      '<td>'+0+'</td>'+
+                                      '<td>'+object.quantity+'</td>'+
+                                      +'</tr>');
+
+          }
         }
-
-
     }
 
 
