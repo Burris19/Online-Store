@@ -84,4 +84,9 @@ class FrontedController extends CRUDController
 
     }
 
+    public function getShoppingCart()
+    {
+        return view('e-comer.cart.detail');
+    }
+
 }

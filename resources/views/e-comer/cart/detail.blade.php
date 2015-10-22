@@ -5,7 +5,6 @@
             <li>Carrito de compras</li>
         </ul>
     </div>
-
     <div class="col-md-9" id="basket">
         <div class="box">
             <form method="post" action="checkout1.html">
@@ -93,12 +92,10 @@
         </tbody>
         </table>
         </div>
-
         </div>
 
-
     </div>
-<!-- /.col-md-3 -->
+
 
 </div>
 

@@ -29,6 +29,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('register','FrontedController@register');
     Route::get('depart/{id}','FrontedController@getCities');
     Route::get('detail/{id}','FrontedController@getDetail');
+    Route::get('shoppingCart','FrontedController@getShoppingCart');
 
 });
 

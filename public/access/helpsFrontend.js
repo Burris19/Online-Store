@@ -9,4 +9,12 @@ $(function(){
         var url = 'detail/' + id;
         $('#content').load(url);
     });
+
+    $('.addCart').on('click',function(){
+        var url = 'shoppingCart/';
+        $('#content').load(url);
+
+    });
+
+
 });
