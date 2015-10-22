@@ -10,15 +10,15 @@
         <div class="row" id="productMain">
             <div class="col-sm-6">
                 <div id="mainImage">
-                    <img src="{{ $data['image'] }}" alt="" class="img-responsive">
+                    <img name="img" src="{{ $data['image'] }}" alt="" class="img-responsive">
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="box">
-                    <h1 class="text-center">{{ $data['title'] }}</h1>
-                    <p class="price">{{ $data['price'] }}</p>
+                    <h1 name = 'title', class="text-center">{{ $data['title'] }}</h1>
+                    <p class="price" name ="price">{{ $data['price'] }}</p>
                     <p class="text-center buttons">
-                        <button class="btn btn-primary addCart" ><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
+                        <button class="btn btn-primary addCart" data-id = "{{ $data['id'] }}"><i class="fa fa-shopping-cart"></i> Agregar al carro</button>
                         <button type="button" class="btn btn-default" >Agregar a mis Favoritos</button>
                     </p>
                 </div>
