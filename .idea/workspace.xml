@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc95f3cb-f30f-4fab-bf23-c8a3c2ba1a53" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/e-comer/products/detail.blade.php" afterPath="$PROJECT_DIR$/resources/views/e-comer/products/detail.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/access/functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blade.xml" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/e-comer/cart/detail.blade.php" afterPath="$PROJECT_DIR$/resources/views/e-comer/cart/detail.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/access/helpsFrontend.js" afterPath="$PROJECT_DIR$/public/access/helpsFrontend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/e-comer/_base/home/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/e-comer/_base/home/navbar.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="store.iws" />
@@ -30,36 +31,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="helpsFrontend.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/e-comer/cart/detail.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.656051">
+              <caret line="41" column="103" selection-start-line="41" selection-start-column="103" selection-end-line="41" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpsFrontend.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/access/helpsFrontend.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70229006">
-              <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
-                <element signature="e#591#972#0" expanded="false" />
-                <element signature="e#991#1164#0" expanded="false" />
+                <element signature="e#161#346#0" expanded="false" />
+                <element signature="e#1028#1409#0" expanded="false" />
+                <element signature="e#1428#1601#0" expanded="false" />
+                <element signature="e#1622#3711#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/e-comer/_base/home/navbar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.259259">
-              <caret line="48" column="124" selection-start-line="48" selection-start-column="119" selection-end-line="48" selection-end-column="124" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/e-comer/products/detail.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.111111">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -124,12 +117,12 @@
         <option value="$PROJECT_DIR$/public/access/petitions.js" />
         <option value="$PROJECT_DIR$/resources/views/e-comer/_base/home/script.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/products/detail.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/e-comer/cart/detail.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/FrontedController.php" />
         <option value="$PROJECT_DIR$/resources/views/e-comer/_base/home/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/e-comer/products/detail.blade.php" />
         <option value="$PROJECT_DIR$/public/access/helpsFrontend.js" />
+        <option value="$PROJECT_DIR$/resources/views/e-comer/cart/detail.blade.php" />
       </list>
     </option>
   </component>
@@ -150,8 +143,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="26" />
-    <option name="y" value="32" />
+    <option name="x" value="64" />
+    <option name="y" value="70" />
     <option name="width" value="1456" />
     <option name="height" value="776" />
   </component>
@@ -179,7 +172,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,32 +252,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="store" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e-comer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="cart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -306,12 +272,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="rout&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;nav&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/_base/home/navbar.blade.php&#10;heade&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/_base/home/header.blade.php&#10;fron&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;route&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;script&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/_base/home/script.blade.php&#10;}&#9;FILE&#9;file:///home/julian/Code/store/public/access/helpsFrontend.js&#10;fr&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;fronted&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;FrontedController&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;help&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;products&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/_base/home/products.blade.php&#10;provide&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_25_214100_create_provider_table.php&#10;category&#9;FILE&#9;file:///home/julian/Code/store/app/Repositories/Category/Category.php&#10;Au&#9;FILE&#9;file:///home/julian/Code/store/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php&#10;ClientsController&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Auth/ClientsController.php&#10;hel&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;rou&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;logi&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/login/login.blade.php&#10;regi&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/register/register.blade.php&#10;authenticateus&#9;FILE&#9;file:///home/julian/Code/store/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php&#10;Authenticatea&#9;FILE&#9;file:///home/julian/Code/store/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php&#10;fro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;clie&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_173525_create_client_table.php&#10;regis&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/register/register.blade.php&#10;dia&#9;FILE&#9;file:///home/julian/Code/store/docs/diagram_tres.png&#10;AuthenticatesUsers&#9;null&#9;null&#10;AuthenticatesAndRegistersUsers&#9;null&#9;null&#10;he&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;clientA&#9;null&#9;null&#10;depar&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/DepartmentController.php&#10;crud&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;create&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;crea&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;cre&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;cityC&#9;null&#9;null&#10;depa&#9;null&#9;null&#10;Sto&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/StoreController.php&#10;departme&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_171649_create_department_table.php&#10;front&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;address&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_175214_create_client_address_table.php&#10;diag&#9;FILE&#9;file:///home/julian/Code/store/docs/diagram_tres.png&#10;ro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;routes&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;helps&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;crudc&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;side&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/_base/home/sidebar.blade.php&#10;kernel&#9;FILE&#9;file:///home/julian/Code/store/vendor/symfony/http-kernel/Kernel.php&#10;cr&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;productC&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/ProductController.php" />
+    <property name="SearchEverywhereHistoryKey" value="fro&#9;FILE&#9;file:///home/julian/Code/store/public/access/helpsFrontend.js&#10;rout&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;nav&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/_base/home/navbar.blade.php&#10;heade&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/_base/home/header.blade.php&#10;fron&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;route&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;script&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/_base/home/script.blade.php&#10;}&#9;FILE&#9;file:///home/julian/Code/store/public/access/helpsFrontend.js&#10;fr&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;fronted&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;FrontedController&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;help&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;products&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/_base/home/products.blade.php&#10;provide&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_25_214100_create_provider_table.php&#10;category&#9;FILE&#9;file:///home/julian/Code/store/app/Repositories/Category/Category.php&#10;Au&#9;FILE&#9;file:///home/julian/Code/store/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php&#10;ClientsController&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Auth/ClientsController.php&#10;hel&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;rou&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;logi&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/login/login.blade.php&#10;regi&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/register/register.blade.php&#10;authenticateus&#9;FILE&#9;file:///home/julian/Code/store/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php&#10;Authenticatea&#9;FILE&#9;file:///home/julian/Code/store/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php&#10;clie&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_173525_create_client_table.php&#10;regis&#9;FILE&#9;file:///home/julian/Code/store/resources/views/e-comer/register/register.blade.php&#10;dia&#9;FILE&#9;file:///home/julian/Code/store/docs/diagram_tres.png&#10;AuthenticatesUsers&#9;null&#9;null&#10;AuthenticatesAndRegistersUsers&#9;null&#9;null&#10;he&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;clientA&#9;null&#9;null&#10;depar&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/DepartmentController.php&#10;crud&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;create&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;crea&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;cre&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/stores/create.blade.php&#10;cityC&#9;null&#9;null&#10;depa&#9;null&#9;null&#10;Sto&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/StoreController.php&#10;departme&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_171649_create_department_table.php&#10;front&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Frontend/FrontedController.php&#10;address&#9;FILE&#9;file:///home/julian/Code/store/database/migrations/2015_09_28_175214_create_client_address_table.php&#10;diag&#9;FILE&#9;file:///home/julian/Code/store/docs/diagram_tres.png&#10;ro&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;routes&#9;FILE&#9;file:///home/julian/Code/store/app/Http/routes.php&#10;helps&#9;FILE&#9;file:///home/julian/Code/store/public/access/helps.js&#10;crudc&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;side&#9;FILE&#9;file:///home/julian/Code/store/resources/views/admin/_base/home/sidebar.blade.php&#10;kernel&#9;FILE&#9;file:///home/julian/Code/store/vendor/symfony/http-kernel/Kernel.php&#10;cr&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/CRUDController.php&#10;productC&#9;FILE&#9;file:///home/julian/Code/store/app/Http/Controllers/Admin/ProductController.php" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
@@ -368,7 +335,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="26" y="32" width="1456" height="776" extended-state="0" />
+    <frame x="64" y="70" width="1456" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -377,19 +344,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17950481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14649244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -408,9 +375,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -426,18 +393,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Repositories/City/CityRepo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6666665">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/City/City.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -477,7 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4622793">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -485,9 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28892455">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3187251">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -662,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1434263">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.22406639">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0414938">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37841725">
           <caret line="16" column="61" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2866242">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,15 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.259259">
           <caret line="69" column="72" selection-start-line="69" selection-start-column="72" selection-end-line="69" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/e-comer/cart/detail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62738854">
-          <caret line="94" column="14" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,15 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4410828">
           <caret line="31" column="28" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/e-comer/products/detail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.111111">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,19 +723,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.259259">
           <caret line="48" column="124" selection-start-line="48" selection-start-column="119" selection-end-line="48" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/e-comer/products/detail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48407644">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/access/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32977098">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/access/helpsFrontend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70229006">
-          <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
-            <element signature="e#591#972#0" expanded="false" />
-            <element signature="e#991#1164#0" expanded="false" />
+            <element signature="e#161#346#0" expanded="false" />
+            <element signature="e#1028#1409#0" expanded="false" />
+            <element signature="e#1428#1601#0" expanded="false" />
+            <element signature="e#1622#3711#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/e-comer/cart/detail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.656051">
+          <caret line="41" column="103" selection-start-line="41" selection-start-column="103" selection-end-line="41" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>

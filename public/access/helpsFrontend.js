@@ -4,9 +4,6 @@
 $(function(){
     var items = localStorage.length;
     $('.items').text(items);
-
-
-
     $('.detail').on('click',function(e){
         e.preventDefault();
         var parent = $(this).parents('.item');
@@ -14,16 +11,22 @@ $(function(){
         var url = 'detail/' + id;
         $('#content').load(url);
     });
-
     $('.addCart').on('click',function(){
         pedido.id = $(this).data('id');
         functions.fill();
         functions.validateAction($(this).data('id'));
         $('#content').load('shoppingCart',function(){
             functions.fillTable();
+            functions.getTotal('tableBuy');
+            $(".quantity").change(function(e){
+                var quantity = $(this).val();
+                var price = $($(this).parent()).next().text();
+                var total = functions.total(price,quantity);
+                $(this).parent().siblings('.total').text(total);
+                functions.getTotal('tableBuy');
+            });
         });
     });
-
     var Contacts = {
         index: 1,
         init: function(){},
@@ -69,30 +72,29 @@ $(function(){
                 object.quantity +=1 ;
                 localStorage.removeItem(''+id);
                 localStorage.setItem( ''+id , JSON.stringify(object) );
-
             }
         },
-
         fillTable: function(){
-          //debugger
           for ( var i = 0, len = localStorage.length; i < len; ++i )
           {
             var object =JSON.parse(localStorage.getItem(localStorage.key(i)));
-            console.log(object);
-
             $('.table tbody').append('<tr>'+
-                                      '<td>'+object.name+'</td>'+
-                                      '<td><input type="number" value='+object.quantity+' class="form-control" width=100></td>'+
-                                      '<td>'+object.price+'</td>'+
-                                      '<td>'+0+'</td>'+
-                                      '<td>'+object.quantity+'</td>'+
+                                          '<td>'+object.name+'</td>'+
+                                          '<td><input type="number" value='+object.quantity+' class="form-control quantity" style = "width : 75px"></td>'+
+                                          '<td class="price">'+object.price+'</td>'+
+                                          '<td>'+0+'</td>'+
+                                          '<td class="total">'+functions.total(object.price,object.quantity)+'</td>'+
                                       +'</tr>');
-
           }
+        },
+        getTotal : function(idTable){
+            var total = 0.00;
+            var table = $('#'+ idTable + ' tr .total');
+            table.each(function(index){
+               total += parseInt($(this).text());
+            });
+            $('#fullTotal').text(total);
         }
     }
-
-
-
 
 });
