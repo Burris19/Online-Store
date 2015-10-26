@@ -1,16 +1,16 @@
-<div class="container">
-    <div class="col-md-12">
-        <div id="main-slider">
-            <div class="item">
+<div class="container" style="height: 450px">
+    <div class="col-md-12" style="height:  450px">
+        <div id="main-slider" style="height: 450px">
+            <div class="item" style="height: 450px">
                 <img src="baner/uno.jpg" alt="" class="img-responsive">
             </div>
-            <div class="item">
-                <img class="baner-responsive" src="img/tres.jpg" alt="">
+            <div class="item" style="height: 450px" >
+                <img class="img-responsive" src="baner/tres.jpg" alt="">
             </div>
-            <div class="item">
-                <img class="baner-responsive" src="img/cuatro.jpg" alt="">
+            <div class="item" style="height: 450px" >
+                <img class="img-responsive" src="baner/cuatro.jpg" alt="">
             </div>
         </div>
-        <!-- /#main-slider -->
     </div>
 </div>
+<hr>

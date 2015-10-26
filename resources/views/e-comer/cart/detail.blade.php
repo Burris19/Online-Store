@@ -13,12 +13,12 @@
                 <div class="table-responsive">
                     <table class="table" id="tableBuy">
                         <thead>
-                        <tr>
-                            <th>Producto</th>
+                            <tr>
+                                <th>Producto</th>
                                 <th>Cantidad</th>
                                 <th>Precio Unitario</th>
                                 <th>Descuento</th>
-                                <th>Total</th>
+                                <th colspan="2">Total</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -26,7 +26,7 @@
                         <tfoot>
                             <tr>
                                 <th colspan="4">Total</th>
-                                <th id="fullTotal">Q 0.00</th>
+                                <th colspan="2" id="fullTotal">Q 0.00</th>
                             </tr>
                         </tfoot>
                     </table>

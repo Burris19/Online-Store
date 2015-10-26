@@ -11,7 +11,6 @@ $(function(){
         var url = 'detail/' + id;
         $('#content').load(url);
     });
-
     $('.addCart2').on('click',function(){
         $('#content').load('shoppingCart',function(){
             functions.fillTable();
@@ -22,13 +21,40 @@ $(function(){
                 var total = functions.total(price,quantity);
                 $(this).parent().siblings('.total').text(total);
                 functions.getTotal('tableBuy');
+                var id = $(this).data('id');
+                functions.validateAction(id);
+
+            });
+            $('.deleteItem').on('click',function(e){
+                e.preventDefault();
+                var idItem = $(this).data('id');
+                localStorage.removeItem(''+idItem);
+                $('#content').load('shoppingCart',function(){
+                    functions.fillTable();
+                    functions.getTotal('tableBuy');
+                    $(".quantity").change(function(e){
+                        var quantity = $(this).val();
+                        var price = $($(this).parent()).next().text();
+                        var total = functions.total(price,quantity);
+                        $(this).parent().siblings('.total').text(total);
+                        functions.getTotal('tableBuy');
+                        var id = $(this).data('id');
+                        functions.validateAction(id);
+
+                    });
+                    $('.deleteItem').on('click',function(e){
+                        e.preventDefault();
+                        var idItem = $(this).data('id');
+                        localStorage.removeItem(''+idItem);
+                    });
+                });
             });
         });
     });
     $('.addCart').on('click',function(){
         pedido.id = $(this).data('id');
         functions.fill();
-        functions.validateAction($(this).data('id'));
+        functions.validateAction($(this).data('id'),1);
         $('#content').load('shoppingCart',function(){
             functions.fillTable();
             functions.getTotal('tableBuy');
@@ -38,15 +64,44 @@ $(function(){
                 var total = functions.total(price,quantity);
                 $(this).parent().siblings('.total').text(total);
                 functions.getTotal('tableBuy');
+                var id = $(this).data('id');
+                functions.validateAction(id);
+
+            });
+            $('.deleteItem').on('click',function(e){
+                e.preventDefault();
+                var idItem = $(this).data('id');
+                localStorage.removeItem(''+idItem);
+                $('#content').load('shoppingCart',function(){
+                    functions.fillTable();
+                    functions.getTotal('tableBuy');
+                    $(".quantity").change(function(e){
+                        var quantity = $(this).val();
+                        var price = $($(this).parent()).next().text();
+                        var total = functions.total(price,quantity);
+                        $(this).parent().siblings('.total').text(total);
+                        functions.getTotal('tableBuy');
+                        var id = $(this).data('id');
+                        functions.validateAction(id);
+
+                    });
+                    $('.deleteItem').on('click',function(e){
+                        e.preventDefault();
+                        var idItem = $(this).data('id');
+                        localStorage.removeItem(''+idItem);
+                    });
+                });
             });
         });
     });
+
     $('#btn-process-buy').on('click',function(e) {
         e.preventDefault();
         $(this).prop('disabled', true);
         var form = $('#create-buy');
         var type = form.prop('method');
         var url = form.data('url');
+
         $.ajax({
             url: url,
             type: type,
@@ -99,13 +154,12 @@ $(function(){
             var items = localStorage.length;
             $('.items').text(items);
         },
-        validateAction: function(id)
-        {
+        validateAction: function(id){
             var object = JSON.parse(localStorage.getItem(''+id));
             if (object === null){
                 localStorage.setItem( ''+id , JSON.stringify(pedido) );
             }else{
-                object.quantity +=1 ;
+                object.quantity += 1;
                 localStorage.removeItem(''+id);
                 localStorage.setItem( ''+id , JSON.stringify(object) );
             }
@@ -116,10 +170,11 @@ $(function(){
             var object =JSON.parse(localStorage.getItem(localStorage.key(i)));
             $('.table tbody').append('<tr>'+
                                           '<td>'+object.name+'</td>'+
-                                          '<td><input type="number" value='+object.quantity+' class="form-control quantity" style = "width : 75px"></td>'+
+                                          '<td><input type="number" data-id="'+object.id+'" value='+object.quantity+' class="form-control quantity" style = "width : 75px"></td>'+
                                           '<td class="price">'+object.price+'</td>'+
                                           '<td>'+0+'</td>'+
                                           '<td class="total">'+functions.total(object.price,object.quantity)+'</td>'+
+                                          '<td><a href="#" class="deleteItem" data-id="'+object.id+'" ><i class="fa fa-trash-o"></i></a></td>'+
                                       +'</tr>');
           }
         },
@@ -144,6 +199,9 @@ $(function(){
                     quantity: row.quantity
                  };
             });
+        },
+        editaDelete: function(){
+
         }
     }
 

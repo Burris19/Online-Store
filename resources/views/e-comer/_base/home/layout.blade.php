@@ -10,7 +10,6 @@
     <div id="content">
         @yield('content')
     </div>
-
     @include('e-comer._base.home.footer')
     @include('e-comer._base.home.script')
     @yield('otherScript')
