@@ -11,6 +11,20 @@ $(function(){
         var url = 'detail/' + id;
         $('#content').load(url);
     });
+
+    $('.addCart2').on('click',function(){
+        $('#content').load('shoppingCart',function(){
+            functions.fillTable();
+            functions.getTotal('tableBuy');
+            $(".quantity").change(function(e){
+                var quantity = $(this).val();
+                var price = $($(this).parent()).next().text();
+                var total = functions.total(price,quantity);
+                $(this).parent().siblings('.total').text(total);
+                functions.getTotal('tableBuy');
+            });
+        });
+    });
     $('.addCart').on('click',function(){
         pedido.id = $(this).data('id');
         functions.fill();
@@ -26,6 +40,28 @@ $(function(){
                 functions.getTotal('tableBuy');
             });
         });
+    });
+    $('#btn-process-buy').on('click',function(e) {
+        e.preventDefault();
+        $(this).prop('disabled', true);
+        var form = $('#create-buy');
+        var type = form.prop('method');
+        var url = form.data('url');
+        $.ajax({
+            url: url,
+            type: type,
+            data: {
+                products: functions.prepareData()
+            },
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr,ajaxOptions,thrownError){
+                console.log(xhr.status);
+                console.error(thrownError);
+            }
+        });
+
     });
     var Contacts = {
         index: 1,
@@ -94,6 +130,20 @@ $(function(){
                total += parseInt($(this).text());
             });
             $('#fullTotal').text(total);
+        },
+        prepareData:function(){
+             return $.map(localStorage, function (row, index) {
+                 var tmpIndex = index;
+                 if (localStorage.length > 1) {
+                     tmpIndex = index + 1;
+                 };
+                 row = JSON.parse(localStorage.getItem(tmpIndex));
+
+                 return {
+                    id: row.id,
+                    quantity: row.quantity
+                 };
+            });
         }
     }
 

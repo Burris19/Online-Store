@@ -46,7 +46,7 @@
         <div class="navbar-buttons">
 
         <div class="navbar-collapse collapse right" id="basket-overview">
-        <button class="btn btn-primary navbar-btn addCart" ><i class="fa fa-shopping-cart"></i> <span class="hidden-sm items">3 </span> <span class="hidden-sm" >elementos en el carro</span> </button>
+        <button class="btn btn-primary navbar-btn addCart2" ><i class="fa fa-shopping-cart"></i> <span class="hidden-sm items">3 </span> <span class="hidden-sm" >elementos en el carro</span> </button>
 
 
         </div>

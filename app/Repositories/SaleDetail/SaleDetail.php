@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Repositories\SaleDetail;
 
 use Illuminate\Database\Eloquent\Model;
 
 class SaleDetail extends Model
 {
-      protected $table = 'saleDetail';
+      protected $table = 'saleDetails';
 
       protected $fillable = [
           'id_sale',

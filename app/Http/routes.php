@@ -20,6 +20,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
     Route::resource('stores','StoreController');
     Route::resource('departments','DepartmentController');
     Route::resource('cars','CarController');
+    Route::resource('sales','SaleController');
     Route::get('depart/{id}','CityController@getCities');
 });
 

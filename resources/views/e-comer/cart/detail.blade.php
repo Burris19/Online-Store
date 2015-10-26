@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-12" id="basket">
         <div class="box">
-            <form method="post" action="checkout1.html">
+            <form method="post" id="create-buy" data-url ="admin/sales">
                 <h1>Carrito de compras</h1>
                 <p class="text-muted">Actualmente tienes 3 artículo (s) en su carrito</p>
                 <div class="table-responsive">
