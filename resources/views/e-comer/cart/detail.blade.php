@@ -5,6 +5,13 @@
             <li>Carrito de compras</li>
         </ul>
     </div>
+
+    <div class="col-md-12 message" style="text-align: center">
+        <h3><p class="bg-primary texto">Holis</p></h3>
+    </div>
+
+
+
     <div class="col-md-12" id="basket">
         <div class="box">
             <form method="post" id="create-buy" data-url ="admin/sales">

@@ -2,6 +2,9 @@
  * Created by julian on 21/10/15.
  */
 $(function(){
+    var message = $('.message');
+    message.hide();
+
     var items = localStorage.length;
     $('.items').text(items);
     $('.detail').on('click',function(e){
@@ -94,7 +97,6 @@ $(function(){
             });
         });
     });
-
     $('#btn-process-buy').on('click',function(e) {
         e.preventDefault();
         $(this).prop('disabled', true);
@@ -110,6 +112,21 @@ $(function(){
             },
             success: function(response) {
                 console.log(response);
+                message.show();
+                if(response.success)
+                {
+                    localStorage.clear();
+                    $('.texto').text('Su compra se ha realizado con exito');
+                }
+                else
+                {
+                    $('.texto').text('La transaccion no se pudo completar');
+                }
+
+                setTimeout(function(){
+                    window.location.href = '/';
+                },4000)
+
             },
             error: function(xhr,ajaxOptions,thrownError){
                 console.log(xhr.status);
@@ -204,5 +221,6 @@ $(function(){
 
         }
     }
+
 
 });
