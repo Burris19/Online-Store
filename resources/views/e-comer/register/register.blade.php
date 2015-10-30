@@ -59,21 +59,31 @@
                     <div class="text-center">
                         <button type="button" id="btn-register" class="btn btn-primary"><i class="fa fa-user"></i>Registrar</button>
                     </div>
-                {!! Form::close() !!}
+
             </div>
         </div>
 
-
         <div class="col-md-7">
             <div class="box" id="google_canvas">
-
         </div>
+            <div>
+                <div class="form-group">
+                    {!! Form::label('Latitude') !!}
+                    {!! Form::text('latitude',null,['class' => 'form-control lati'  ]) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::label('Longitude') !!}
+                    {!! Form::text('longitude',null,['class' => 'form-control lodi' ]) !!}
+                </div>
+            </div>
     </div>
+
+{!! Form::close() !!}
 
 
 @endsection
 @section('otherScript')
+    {{--{!! Html::script('access/mapsRegister.js') !!}--}}
     {!! Html::script('access/helps.js') !!}
-    {!! Html::script('access/mapsRegister.js') !!}
-    <!-- {!! Html::script('access/directions.js') !!} -->
+
 @endsection

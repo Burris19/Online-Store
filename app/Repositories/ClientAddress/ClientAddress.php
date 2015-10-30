@@ -12,6 +12,8 @@ class ClientAddress extends Model
           'id_client',
           'id_city',
           'address',
-          'observation'
+          'observation',
+          'latitude',
+          'longitude',
       ];
 }

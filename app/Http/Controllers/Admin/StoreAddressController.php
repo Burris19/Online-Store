@@ -9,7 +9,7 @@ use App\Repositories\StoreAddress\StoreAddressRepo;
 
 class StoreAddressController extends CRUDController
 {
-    protected module='storesAddress';
+    protected $module='storesAddress';
 
     function __construct(StoreAddressRepo $storesAddressRepo)
     {

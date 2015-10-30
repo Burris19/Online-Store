@@ -42,7 +42,7 @@ class ClientsController extends Controller
     {
         $dataClient = $request->only('name', 'last_name', 'phone', 'email');
         $dataUser = $request->only('email', 'password');
-        $dataClientAddress = $request->only('id_city','address');
+        $dataClientAddress = $request->all();
 
         $validator = \Validator::make($dataClient, $this->rulesClient);
 

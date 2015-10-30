@@ -2,6 +2,8 @@
  * Created by julian on 21/10/15.
  */
 $(function(){
+
+
     var message = $('.message');
     message.hide();
 
