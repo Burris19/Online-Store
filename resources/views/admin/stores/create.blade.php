@@ -3,7 +3,7 @@
     <strong></strong>
 </div>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-7">
         <div class="box box-info">
             <div class="box-header with-border">
                 <h2 class="box-title">Registrar Tienda</h2>
@@ -55,6 +55,9 @@
                 </div>
             {!!Form::close()!!}
         </div>
+    </div>
+    <div class="col-md-5">
+         <div class="box" id="google_canvas">
     </div>
 </div>
 {!! Html::script('access/helps.js') !!}

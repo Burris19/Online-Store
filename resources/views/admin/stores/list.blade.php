@@ -47,12 +47,21 @@
               </div>
         </div>
     </div>
+    <div class="col-md-5">
+         <div class="box" id="google_canvas">
+    </div>
+
+        <div class="col-md-7">
+            <div class="box" id="google_canvas">
+        </div>
+
 @endsection
 
 @section('other-scripts')
   {!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
   {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}
   {!! Html::style('plugins/datatables/dataTables.bootstrap.css') !!}
+  {!! Html::script('access/helps.js') !!}
   <script>
     $(function () {
        $("#example1").DataTable();

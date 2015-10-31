@@ -161,8 +161,6 @@ $(function(){
                 {
                     combo.append('<option value=' + key + '>' + value + '</option>');
                 });
-
-
             },
             error: function(xhr,ajaxOptions,thrownError){
                 console.log(xhr.status);
@@ -240,4 +238,7 @@ $(function(){
         });
     });
 
+
+            
+   
 });

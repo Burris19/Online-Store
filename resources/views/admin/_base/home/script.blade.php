@@ -20,9 +20,6 @@
 {!! Html::script('dist/js/pages/dashboard.js"') !!}
 {!! Html::script('dist/js/demo.js') !!}
 {!! Html::script('access/helps.js') !!}
-<<<<<<< HEAD
-{!! Html::script('http://maps.google.com/maps/api/js?sensor=false') !!}
-=======
+{!! Html::script('http://maps.googleapis.com/maps/api/js?&sensor=true') !!}
 {!! Html::script('https://cdn.datatables.net/r/dt/dt-1.10.9/datatables.min.js') !!}
-/datatables.min.js"></script>
->>>>>>> 7d8506d47a56048dc5debcef25bc60347cc38228
+
