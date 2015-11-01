@@ -24,6 +24,12 @@
                           {!! Form::text('last_name',null,['class' => 'form-control', 'placeholder' => 'Apellido del Empleado']) !!}
                       </div>
                   </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            {!! Form::email('email',null,['class' => 'form-control', 'placeholder' => 'Correo electronico']) !!}
+                        </div>
+                    </div>
                   <div class="form-group">
                       <label class="col-sm-2 control-label">Telefono</label>
                       <div class="col-sm-10">
@@ -61,6 +67,13 @@
                         {!! Form::file('image',['class' => 'form-control']) !!}
                     </div>
                   </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            {!! Form::password('password',['class' => 'form-control', 'placeholder' => 'Password']) !!}
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="box-footer">
