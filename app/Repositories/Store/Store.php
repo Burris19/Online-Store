@@ -11,7 +11,18 @@ class Store extends Model
     protected $fillable = [
         'code',
         'name',
-        'phone'
+        'phone',
+        'id_city'
     ];
+
+
+    public $relations = [
+        'city'
+    ];
+
+    public function city(){
+        return $this->hasOne('App\Repositories\City\City', 'id','id_city')->with('department');
+    }
+
 
 }

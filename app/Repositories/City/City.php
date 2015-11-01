@@ -13,11 +13,11 @@ class City extends Model
         'description'
     ];
     public $relations = [
-        'departments'
+        'department'
     ];
 
 
-    public function departments()
+    public function department()
     {
         return $this->hasOne('App\Repositories\Department\Department' , 'id' , 'id_department');
     }

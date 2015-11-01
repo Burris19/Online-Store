@@ -33,12 +33,12 @@
    	 	                  @foreach($data as $key=> $valor)
    	 		                   <tr>
                      	 			<td>{{ $key+1}}</td>
-                     	 			<td>{{ $valor->stores->code}}</td>
-                     	 			<td>{{ $valor->stores->name}}</td>
-                     	 			<td>{{ $valor->stores->phone}}</td>
-                            <td>{{ $valor->cities->departments->description }}</td>
-                            <td>{{ $valor->cities->description }}</td>
-                            <td>{{ $valor->address }}</td>
+                     	 			<td>{{ $valor->code}}</td>
+                     	 			<td>{{ $valor->name}}</td>
+                     	 			<td>{{ $valor->phone}}</td>
+                                    <td>{{ $valor['city']['department']['description'] }}</td>
+                                   <td>{{ $valor['city']['description'] }}</td>
+                                    <td>{{ $valor->address }}</td>
                      	 		</tr>
                      	 	@endforeach
                     </tbody>
@@ -47,14 +47,6 @@
               </div>
         </div>
     </div>
-    <div class="col-md-5">
-         <div class="box" id="google_canvas">
-    </div>
-
-        <div class="col-md-7">
-            <div class="box" id="google_canvas">
-        </div>
-
 @endsection
 
 @section('other-scripts')
