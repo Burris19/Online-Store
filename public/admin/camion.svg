@@ -1,0 +1,17 @@
+<?xml version="1.0"?><svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <title>Cami n de reparto</title>
+ <metadata id="metadata4477">image/svg+xmlSymbol: LastkraftwagenPurodha Blissenbachhttp://commons.mediawiki.org/wiki/Image:Zusatzzeichen_1048-12.svg</metadata>
+ <g>
+  <title>Layer 1</title>
+  <path d="m-62.191151,821.639282l0,97.72522l24.410049,0l0,-96.15741l-24.410049,-1.56781z" id="path5404" stroke-dashoffset="0" stroke-miterlimit="4" marker-end="none" marker-mid="none" marker-start="none" stroke-linecap="round" fill-rule="nonzero" fill="white"/>
+  <path d="m34.92593,819.089478l0,97.725159l24.410049,0l0,-96.15741l-24.410049,-1.567749z" id="path5425" stroke-dashoffset="0" stroke-miterlimit="4" marker-end="none" marker-mid="none" marker-start="none" stroke-linecap="round" fill-rule="nonzero" fill="white"/>
+  <g externalResourcesRequired="false" transform="matrix(0.617065 0 0 0.617065 3.20484 32.4973)" id="g5452">
+   <path d="m344.6651,151.498322l0,302.859283l347.407776,0.391083c-20.386963,22.922974 -33.114868,54.518677 -32.948486,95.987946l-344.867065,-0.28241c-3.303528,-160.884308 -169.157272,-160.336914 -172.761169,-0.929932c-24.910309,-0.255798 -28.365654,-8.041992 -28.60582,-39.621948l0,-120.770172c-0.312775,-53.971008 -5.210297,-18.344116 23.819412,-120.690491c29.869888,-109.100006 21.635315,-99.015717 48.652435,-101.83139l159.302856,-15.111969l0.000061,0zm-69.002136,178.572388l1.374939,-128.674149l-88.684219,7.569061c-16.167603,1.490616 -16.302155,1.630295 -21.999191,27.437881l-22.686661,83.259705c-7.621475,25.537689 -6.408401,33.062866 14.436951,29.330139l117.558182,-18.922638zm663.642883,124.90686l0.168945,68.042633l-57.267944,27.899048l-50.28241,-0.04425c0.204712,-39.454681 -11.70929,-72.638367 -32.833557,-95.948425l140.214966,0.050995z" id="path5439" fill-rule="evenodd" fill="#ff7f00"/>
+   <circle cx="228.149306" cy="507.681372" r="73" id="circle5443" fill="#000000"/>
+   <circle cx="746.149309" cy="512.181375" r="68.5" id="circle5445" fill="#000000"/>
+   <ellipse fill="#ff7f00" stroke-width="null" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="228.649307" cy="512.681374" id="svg_1" rx="24" ry="22"/>
+   <ellipse fill="#ff7f00" stroke-width="null" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" cx="747.649307" cy="511.681374" rx="24" ry="22" id="svg_3"/>
+   <rect width="591.324043" height="315.701532" x="349.476482" y="140.840064" id="rect5441" fill="#56aaff"/>
+  </g>
+ </g>
+</svg>

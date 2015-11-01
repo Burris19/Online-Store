@@ -42,12 +42,21 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
+    public $relations = [
+        'employee'
+    ];
+
     // Attributes
     public function setPasswordAttribute($value)
     {
         if(! empty($value)) {
             $this->attributes['password'] = \Hash::make($value);
         }
+    }
+
+    public function employee()
+    {
+        return $this->hasMany('App\Repositories\Employee\Employee', 'idUser', 'id')->with('typeEmployee');
     }
 
 
