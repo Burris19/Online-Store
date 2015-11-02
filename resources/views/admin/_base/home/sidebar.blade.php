@@ -1,6 +1,6 @@
 <section class="sidebar">
   <ul class="sidebar-menu">
-    <li class="header">{{ Auth::user()['employee'][0]['typeEmployee']['description'] }}</li>
+    <li class="header">Bienvenido {{ Auth::user()['employee'][0]['typeEmployee']['description'] }}</li>
     <li>
       <a href="products">
         <i class="glyphicon glyphicon-apple"></i> <span>Productos</span>

@@ -34,6 +34,7 @@
                 <form  role="form" method="POST" action="login" class="form col-md-12 center-block">
                     <div class="form-group">
                         <input type="text" class="form-control input-lg" placeholder="Email" name="email">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control input-lg" placeholder="Password" name="password">

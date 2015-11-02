@@ -18,6 +18,7 @@ class CreateCityTable extends Migration
             $table->integer('id_department')->unsigned();
             $table->foreign('id_department')->references('id')->on('departments');
 
+            $table->string('codePostal');
             $table->string('description');
 
             $table->timestamps();

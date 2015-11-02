@@ -21,8 +21,8 @@ class CreateEmployeeTable extends Migration
             $table->integer('id_store')->unsigned();
             $table->foreign('id_store')->references('id')->on('stores');
 
-            $table->integer('idUser')->unsigned();
-            $table->foreign('idUser')->references('id')->on('users');
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
 
             $table->string('name');
             $table->string('last_name');

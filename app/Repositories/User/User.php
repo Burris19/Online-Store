@@ -50,13 +50,13 @@ class User extends Model implements AuthenticatableContract,
     public function setPasswordAttribute($value)
     {
         if(! empty($value)) {
-            $this->attributes['password'] = \Hash::make($value);
+            $this->attributes['password'] = bcrypt($value);
         }
     }
 
     public function employee()
     {
-        return $this->hasMany('App\Repositories\Employee\Employee', 'idUser', 'id')->with('typeEmployee');
+        return $this->hasMany('App\Repositories\Employee\Employee', 'id_user', 'id')->with('typeEmployee');
     }
 
 
