@@ -29,14 +29,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                        @foreach($data as  $key => $product)
+                        @foreach($data['products'] as  $key => $product)
                             <tr>
                                 <td>{{ $key + 1   }}</td>
-                                <td>{{ $product->title }} </td>
-                                <td>{{ $product->category->title }} </td>
-                                <td>{{ $product->price  }}</td>
-                                <td>{{ $product->existence }} </td>
-                                <td>{{ $product->provider->name }} </td>
+                                <td>{{ $product['title'] }} </td>
+                                <td>{{ $product['category']['title'] }} </td>
+                                <td>{{ $product['price']  }}</td>
+                                <td>{{ $product['existence'] }} </td>
+                                <td>{{ $product['provider']['name'] }} </td>
                             </tr>
                         @endforeach
                     </tbody>

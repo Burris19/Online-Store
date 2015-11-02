@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Repositories\Product\ProductRepo;
 use App\Repositories\Category\CategoryRepo;
 use App\Repositories\Provider\ProviderRepo;
+use App\Repositories\Store\StoreRepo;
 use Validator;
 
 class ProductController extends CRUDController
@@ -15,6 +16,7 @@ class ProductController extends CRUDController
     protected $productRepo;
     protected $categoryRepo;
     protected $providerRepo;
+    protected $storeRepo;
 
     protected $rules = [
         'code' => 'required|unique:products',
@@ -26,11 +28,12 @@ class ProductController extends CRUDController
 
     function __construct(ProductRepo $productRepo,
                          CategoryRepo $categoryRepo,
-                         ProviderRepo $providerRepo)
+                         ProviderRepo $providerRepo, StoreRepo $storeRepo)
     {
         $this->repo = $productRepo;
         $this->categoryRepo = $categoryRepo;
         $this->providerRepo = $providerRepo;
+        $this->storeRepo = $storeRepo;
     }
 
 
@@ -42,7 +45,8 @@ class ProductController extends CRUDController
 
     public function  index()
     {
-        $data = $this->repo->getWithRelations();
+        $idStore = \Auth::user()['employee'][0]['id_store'];
+        $data = $this->storeRepo->findWithRelations($idStore);
         return view($this->root . '/' . $this->module  .'/list',compact('data'));
     }
 

@@ -11,6 +11,6 @@ class StoreTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Repositories\Store\Store::class,1)->create();
+        factory(App\Repositories\Store\Store::class, 1)->create();
     }
 }

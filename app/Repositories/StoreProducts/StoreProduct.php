@@ -9,7 +9,7 @@ class StoreProduct extends Model
     protected $table = 'storeProducts';
 
     protected $fillable = [
-        'idstore',
+        'idStore',
         'idProduct'
     ];
 }

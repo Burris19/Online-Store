@@ -53,8 +53,24 @@ class EmployeeController extends CRUDController
         $user['password'] = $data['password'];
         $user['type'] = 'administrator';
 
+        if($data['id_type_employee'] == 1)
+        {
+            $data['image'] = 'admin.png';
+        }
+        if($data['id_type_employee'] == 2)
+        {
+            $data['image'] = 'manager.png';
+        }
+        if($data['id_type_employee'] == 3)
+        {
+            $data['image'] = 'camion.svg';
+        }
+
         $user = $this->userRepo->create($user);
-        $data['idUser'] = $user->id;
+        $data['id_user'] = $user->id;
+
+
+
         $record = $this->repo->create($data);
         return compact('success','message','record','data');
 

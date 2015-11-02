@@ -80,7 +80,7 @@ $factory->define(App\Repositories\Product\Product::class, function (Faker\Genera
 $factory->define(App\Repositories\StoreProducts\StoreProduct::class, function (Faker\Generator $faker) {
     return [
         'idStore' =>  App\Repositories\Store\Store::all()->random()->id,
-        'idProduct' =>  App\Repositories\Product\Product::all()->random()->id,
+        'idProduct' =>  App\Repositories\Product\Product::all()->random()->id
     ];
 });
 
