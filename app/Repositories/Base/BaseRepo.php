@@ -86,6 +86,17 @@ abstract class BaseRepo implements BaseInterface {
             ->get();
     }
 
+
+    public function getAndFieldWithRelations($field, $value,  $field2, $value2)
+    {
+        return $this->getModel()
+            ->where($field,'=',$value)
+            ->where($field2,'=',$value2)
+            ->with($this->relations)
+            ->get();
+
+    }
+
     public function lists($value, $value2)
     {
         return $this->getModel()

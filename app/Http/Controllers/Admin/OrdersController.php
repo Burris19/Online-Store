@@ -28,10 +28,12 @@ class OrdersController extends CRUDController
         if($typeUSer == 1)
         {
             $data = $this->repo->getWithRelations();
-
-//            dd($data);
             return view($this->root . '/' . $this->module  .'/list',compact('data'));
         }else{
+            $idStore = \Auth::user()['employee'][0]['id_store'];
+            $data = $this->detailOrderRepo->getAndFieldWithRelations('id_store_origin',$idStore,'status','bodega');
+//            dd($data);
+            return view($this->root . '/' . $this->module  .'/listStore',compact('data'));
 
         }
 
