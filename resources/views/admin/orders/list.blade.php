@@ -22,6 +22,7 @@
                             <th>Bodega Destino</th>
                             <th>Direccion Entrega</th>
                             <th>Nombre Destinatario</th>
+                            <th>Ruta</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -32,6 +33,7 @@
                                 <td>{{ $order['storeDestiny']['name'] }} </td>
                                 <td>{{ $order['sale']['client']['address'][0]['address'] }} </td>
                                 <td>{{ $order['sale']['client']['FullName'] }} </td>
+                                <td><a href="#" data-url = "orders" data-id = "{{ $order->id }}"  class="btn btn-info glyphicon glyphicon-th-list edit"></a></td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -42,6 +44,7 @@
     </div>
 @endsection
 
+<div id="div-modal"></div>
 @section('other-scripts')
     {!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
     {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}

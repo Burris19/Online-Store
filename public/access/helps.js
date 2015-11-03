@@ -198,8 +198,6 @@ $(function(){
         });
     });
 
-
-
     $('#btn-register').on('click',function(e){
         e.preventDefault();
         $('#btn-register').prop('disabled',true);
@@ -238,7 +236,16 @@ $(function(){
         });
     });
 
+    $('.edit').on('click',function(e){
+        e.preventDefault();
+        id = $(this).data('id');
+        url= $(this).data('url');
+        url = url + '/'+ id;
+        $('#div-modal').load(url,function(){
+            $('#modal-edit').modal({show:true});
 
+        })
+    });
             
    
 });

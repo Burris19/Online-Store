@@ -26,7 +26,7 @@ class CreateDetailOrdersTable extends Migration
 
             $table->enum('type',['entrega','bodega']);
             $table->time('time');
-            $table->enum('status',['bodega','entregado']);
+            $table->enum('status',['bodega','entregado','en transito']);
             $table->timestamps();
         });
     }

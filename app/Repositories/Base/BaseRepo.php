@@ -78,6 +78,14 @@ abstract class BaseRepo implements BaseInterface {
                     ->get();
     }
 
+    public function getByFieldWithRelations($field, $value, $comparator = '=')
+    {
+        return $this->getModel()
+            ->where($field,$comparator,$value)
+            ->with($this->relations)
+            ->get();
+    }
+
     public function lists($value, $value2)
     {
         return $this->getModel()

@@ -6,15 +6,19 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Repositories\Order\OrderRepo;
+use App\Repositories\DetailOrder\DetailOrderRepo;
 
 class OrdersController extends CRUDController
 {
     protected $module = 'orders';
+    protected $detailOrderRepo = null;
     protected $repo = null;
 
-    public function __construct(OrderRepo $orderRepo)
+    public function __construct(OrderRepo $orderRepo,
+                                DetailOrderRepo $detailOrderRepo)
     {
         $this->repo = $orderRepo;
+        $this->detailOrderRepo = $detailOrderRepo;
     }
 
     public function index()
@@ -62,7 +66,9 @@ class OrdersController extends CRUDController
      */
     public function show($id)
     {
-        //
+        $data = $this->detailOrderRepo->getByFieldWithRelations('id_order',$id);
+//        dd($data);
+        return view('admin.orders.showDetail', compact('data'));
     }
 
     /**
