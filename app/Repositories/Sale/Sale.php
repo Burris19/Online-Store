@@ -10,9 +10,7 @@ class Sale extends Model
 
       protected $fillable = [
           'id_client',
-          'id_store',
-          'id_transaction',
-          'address',
+          'is_urgent',
           'shipping_price',
           'amount',
           'total'

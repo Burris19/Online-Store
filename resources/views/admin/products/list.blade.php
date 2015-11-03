@@ -4,9 +4,12 @@
       Productos
       <small>listado</small>
     </h1>
-    <ol class="breadcrumb" style="">
-      <button data-root = 'products' class="btn btn-block btn-primary btn-sm create">Crear registro</button>
-    </ol>
+        @if( Auth::user()['employee'][0]['id_type_employee'] <= 2 )
+            <ol class="breadcrumb" style="">
+                <button data-root = 'products' class="btn btn-block btn-primary btn-sm create">Crear registro</button>
+            </ol>
+        @endif
+
 @endsection
 
 @section('content')

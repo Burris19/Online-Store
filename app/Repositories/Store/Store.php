@@ -30,4 +30,6 @@ class Store extends Model
         return $this->belongsToMany('App\Repositories\Product\Product', 'storeProducts', 'idStore', 'idProduct')->with('category','provider');
     }
 
+
+
 }

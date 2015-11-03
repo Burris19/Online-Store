@@ -35,9 +35,7 @@ class SaleController extends CRUDController
     public function store(Request $request)
     {
         $data = $request['products'];
-
-        $sale['id_client'] = \Auth::id();
-        $sale['id_store'] = 1;
+        $sale['id_client'] = \Auth::user()['client'][0]['id'];
         $sale['shipping_price'] = 250;
         $sale['is_urgent'] = false;
         $sale['amount'] = 0;

@@ -16,6 +16,7 @@ Route::post('admin/login', 'Auth\AuthController@postLogin');
 Route::get('admin/logout', 'Auth\AuthController@getLogout');
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin', 'middleware' => 'auth'], function () {
+    Route::resource('orders','OrdersController');
     Route::resource('products', 'ProductController');
     Route::resource('providers','ProviderController');
     Route::resource('typeEmployees','TypeEmployeeController');

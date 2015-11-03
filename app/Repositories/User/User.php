@@ -43,7 +43,8 @@ class User extends Model implements AuthenticatableContract,
     protected $hidden = ['password', 'remember_token'];
 
     public $relations = [
-        'employee'
+        'employee',
+        'client'
     ];
 
     // Attributes
@@ -57,6 +58,11 @@ class User extends Model implements AuthenticatableContract,
     public function employee()
     {
         return $this->hasMany('App\Repositories\Employee\Employee', 'id_user', 'id')->with('typeEmployee');
+    }
+
+    public function client()
+    {
+        return $this->hasMany('App\Repositories\Client\Client', 'id_user', 'id');
     }
 
 

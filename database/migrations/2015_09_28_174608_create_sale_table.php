@@ -18,9 +18,6 @@ class CreateSaleTable extends Migration
             $table->integer('id_client')->unsigned();
             $table->foreign('id_client')->references('id')->on('clients');
 
-            $table->integer('id_store')->unsigned();
-            $table->foreign('id_store')->references('id')->on('stores');
-
             $table->decimal('shipping_price',18,2);
             $table->boolean('is_urgent')->default(false);
             $table->decimal('amount',18,2);
