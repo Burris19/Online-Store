@@ -2,7 +2,7 @@
   <ul class="sidebar-menu">
     <li class="header">Bienvenido {{ Auth::user()['employee'][0]['typeEmployee']['description'] }}</li>
     <li>
-        <a href="pedidos">
+        <a href="orders">
           <i class="glyphicon glyphicon-apple"></i> <span>Pedidos</span>
         </a>
         @if( Auth::user()['employee'][0]['id_type_employee'] === 1 )

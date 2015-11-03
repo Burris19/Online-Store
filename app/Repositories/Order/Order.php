@@ -17,14 +17,14 @@ class Order extends Model
 
 
     public $relations = [
-        'order',
+        'sale',
         'storeOrigin',
         'storeDestiny'
     ];
 
     public function sale()
     {
-        return $this->hasOne('App\Repositories\Sale\Sale','id','id_sale');
+        return $this->hasOne('App\Repositories\Sale\Sale','id','id_sale')->with('client');
     }
 
     public function storeOrigin()

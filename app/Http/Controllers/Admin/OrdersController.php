@@ -5,17 +5,32 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Repositories\Order\OrderRepo;
 
-class OrdersController extends Controller
+class OrdersController extends CRUDController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    protected $module = 'orders';
+    protected $repo = null;
+
+    public function __construct(OrderRepo $orderRepo)
+    {
+        $this->repo = $orderRepo;
+    }
+
     public function index()
     {
-        //
+        $typeUSer = \Auth::user()['employee'][0]['id_type_employee'];
+
+        if($typeUSer == 1)
+        {
+            $data = $this->repo->getWithRelations();
+
+//            dd($data);
+            return view($this->root . '/' . $this->module  .'/list',compact('data'));
+        }else{
+
+        }
+
     }
 
     /**
