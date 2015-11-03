@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Repositories\Order\OrderRepo;
 use App\Repositories\DetailOrder\DetailOrderRepo;
+use Mockery\Exception;
 
 class OrdersController extends CRUDController
 {
@@ -32,78 +33,47 @@ class OrdersController extends CRUDController
         }else{
             $idStore = \Auth::user()['employee'][0]['id_store'];
             $data = $this->detailOrderRepo->getAndFieldWithRelations('id_store_origin',$idStore,'status','bodega');
-//            dd($data);
             return view($this->root . '/' . $this->module  .'/listStore',compact('data'));
 
         }
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $data = $this->detailOrderRepo->getByFieldWithRelations('id_order',$id);
-//        dd($data);
         return view('admin.orders.showDetail', compact('data'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        //
+        try{
+            $data = $this->detailOrderRepo->findOrFail($id);
+            $id_store_destiny = $data->id_store_destiny;
+            $data->status = 'entregado';
+            $data->save();
+
+            $id_store_origin = $this->detailOrderRepo->findByField('id_store_origin',$id_store_destiny);
+            $id_store_origin->status = 'bodega';
+            $id_store_origin->save();
+
+            $success = true;
+            $message = "Registro entregado con exito";
+
+            return response()
+                ->json(compact('success', 'message'));
+
+        } catch(\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'An error has occurred',
+                'exception' => $e->getMessage()
+            ]);
+        }
+
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

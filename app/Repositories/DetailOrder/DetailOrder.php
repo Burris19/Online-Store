@@ -26,7 +26,7 @@ class DetailOrder extends Model
 
     public function order()
     {
-        return $this->hasOne('App\Repositories\Order\Order','id','id_order');
+        return $this->hasOne('App\Repositories\Order\Order','id','id_order')->with('sale');
     }
 
     public function storeOrigin()

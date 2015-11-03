@@ -246,6 +246,29 @@ $(function(){
 
         })
     });
-            
+
+
+    $('.confirmOrder').on('click',function(e){
+        e.preventDefault();
+        var idOrder = $(this).data('id');
+        var url = 'orders/' + idOrder + '/edit';
+        $.ajax({
+            url: url,
+            type: 'get',
+            success: function(response) {
+
+                setTimeout(function(){
+                    window.location.href = 'orders';
+                },2000)
+
+
+            },
+            error: function(xhr,ajaxOptions,thrownError){
+                console.log(xhr.status);
+                console.error(thrownError);
+            }
+        });
+
+    });
    
 });

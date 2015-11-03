@@ -36,19 +36,17 @@
                                 <td>{{ $order['time'] }}</td>
                                 <td>
                                     @if( $order['type'] != 'bodega')
-                                    @else
+                                        {{ $order['order']['sale']['client']['address'][0]['address'] }}
                                     @endif
                                 <td>
                                     @if( $order['type'] != 'bodega')
-                                    @else
+                                        {{ $order['order']['sale']['client']['FullName'] }}
                                     @endif
                                 </td>
                                 <td>{{ $order['status'] }}</td>
                                 <td>
                                     @if( $order['status'] == 'bodega')
-                                        <a href="#" data-id="{{ $order->id }}" data-toggle="tooltip" title="Confirmar Entrega" class="btn btn-effect-ripple btn-xs btn-danger delete"><i class="fa fa-times"></i></a>
-                                    @else
-
+                                        <button data-id="{{ $order->id }}"  title="Confirmar Entrega" class="btn btn-effect-ripple btn-small btn-danger confirmOrder"><i class="fa fa-times"></i></button>
                                     @endif
                                 </td>
 
