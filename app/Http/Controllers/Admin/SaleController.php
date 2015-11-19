@@ -9,6 +9,8 @@ use App\Repositories\Sale\SaleRepo;
 use App\Repositories\SaleDetail\SaleDetailRepo;
 use App\Repositories\Product\ProductRepo;
 use App\Repositories\ClientAddress\ClientAddressRepo;
+use App\Repositories\StoreAddress\StoreAddressRepo;
+
 class SaleController extends CRUDController
 {
     protected $rules =[
@@ -18,16 +20,19 @@ class SaleController extends CRUDController
     protected $saleDetailRepo = null;
     protected $productRepo = null;
     protected $clientAddressRepo = null;
+    protected $storeAddressRepo = null;
 
     public function __construct(SaleRepo $saleRepo,
                                 SaleDetailRepo $saleDetailRepo,
                                 ProductRepo $productRepo,
-                                ClientAddressRepo $clientAddressRepo)
+                                ClientAddressRepo $clientAddressRepo,
+                                StoreAddressRepo $storeAddressRepo)
     {
         $this->repo = $saleRepo;
         $this->saleDetailRepo = $saleDetailRepo;
         $this->productRepo = $productRepo;
         $this->clientAddressRepo = $clientAddressRepo;
+        $this->storeAddressRepo = $storeAddressRepo;
     }
 
     /**
@@ -45,8 +50,37 @@ class SaleController extends CRUDController
         //get address client whit relations
         $client = $this->clientAddressRepo->findWithRelations($idClient);
 
+        //get id city client
         $idCity = $client['city']['id'];
+
+        //get id department client
         $idDepartment = $client['city']['department']['id'];
+
+
+
+        //get all addresses store
+        $storeAddreses = $this->storeAddressRepo->getWithRelations();
+
+        $department = [];
+
+        foreach($storeAddreses as $key => $value)
+        {
+
+            if($value['city']['department']['id'] == $idDepartment )
+            {
+                $department[$key] = $value['city']['department']['id'];
+            }
+        }
+
+        if ( count($department) == 0)
+        {
+            return "ninguna tienda";
+        }else
+        {
+            return "se encontraron tiendas";
+        }
+
+
 
 
 
