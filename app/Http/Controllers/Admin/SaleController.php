@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Sale\SaleRepo;
 use App\Repositories\SaleDetail\SaleDetailRepo;
 use App\Repositories\Product\ProductRepo;
+use App\Repositories\ClientAddress\ClientAddressRepo;
 class SaleController extends CRUDController
 {
     protected $rules =[
@@ -16,14 +17,17 @@ class SaleController extends CRUDController
 
     protected $saleDetailRepo = null;
     protected $productRepo = null;
+    protected $clientAddressRepo = null;
 
     public function __construct(SaleRepo $saleRepo,
                                 SaleDetailRepo $saleDetailRepo,
-                                ProductRepo $productRepo)
+                                ProductRepo $productRepo,
+                                ClientAddressRepo $clientAddressRepo)
     {
         $this->repo = $saleRepo;
         $this->saleDetailRepo = $saleDetailRepo;
         $this->productRepo = $productRepo;
+        $this->clientAddressRepo = $clientAddressRepo;
     }
 
     /**
@@ -35,7 +39,20 @@ class SaleController extends CRUDController
     public function store(Request $request)
     {
         $data = $request['products'];
-        $sale['id_client'] = \Auth::user()['client'][0]['id'];
+        $idClient = \Auth::user()['client'][0]['id'];
+        $sale['id_client'] = $idClient;
+
+        //get address client whit relations
+        $client = $this->clientAddressRepo->findWithRelations($idClient);
+
+        $idCity = $client['city']['id'];
+        $idDepartment = $client['city']['department']['id'];
+
+
+
+
+
+
         $sale['shipping_price'] = 250;
         $sale['is_urgent'] = false;
         $sale['amount'] = 0;

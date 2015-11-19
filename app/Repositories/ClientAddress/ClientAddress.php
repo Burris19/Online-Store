@@ -17,6 +17,13 @@ class ClientAddress extends Model
       'longitude',
     ];
 
+    public $relations = [
+        'city'
+    ];
+
+    public function city(){
+      return $this->hasOne('App\Repositories\City\City', 'id' , 'id_city')->with('department');
+    }
 
 
 }

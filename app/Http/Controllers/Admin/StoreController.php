@@ -8,15 +8,15 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Store\StoreRepo;
 use App\Repositories\Department\DepartmentRepo;
 use App\Repositories\City\CityRepo;
-
+use App\Repositories\StoreAddress\StoreAddressRepo;
 
 class StoreController extends CRUDController
 {
+    protected $module='stores';
+    protected $departmentRepo;
+    protected $cityRepo;
+    protected $storeAddressRepo = null;
 
-
-  protected $module='stores';
-  protected $departmentRepo;
-  protected $cityRepo;
   protected $rules = [
       'code'  =>  'required|unique:stores',
       'name'  =>  'required',
@@ -27,11 +27,12 @@ class StoreController extends CRUDController
 
   function __construct(StoreRepo $storeRepo,
                        DepartmentRepo $departmentRepo,
-                       CityRepo $cityRepo)
+                       CityRepo $cityRepo, StoreAddressRepo $storeAddressRepo)
   {
       $this->repo=$storeRepo;
       $this->departmentRepo=$departmentRepo;
       $this->cityRepo=$cityRepo;
+      $this->storeAddressRepo = $storeAddressRepo;
   }
 
   public function index()
@@ -50,6 +51,7 @@ class StoreController extends CRUDController
   public function store(Request $request)
   {
       $data = $request->all();
+
       try {
           $validator = \Validator::make($data, $this->rules);
           $success = true;
@@ -58,6 +60,8 @@ class StoreController extends CRUDController
           if ($validator->passes())
           {
               $record = $this->repo->create($data);
+              $data['id_store'] = $record->id;
+              $record = $this->storeAddressRepo->create($data);
               return compact('success','message','record','data');
           }
           else
