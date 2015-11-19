@@ -24,6 +24,9 @@
           <a href="departments">
             <i class="fa fa-map-marker"></i> <span>Departamentos</span>
           </a>
+          <a href="storeProducts">
+            <i class="fa fa-map-marker"></i> <span>Asignacion Productos</span>
+          </a>
         @else
           @if( Auth::user()['employee'][0]['id_type_employee'] === 2 )
             <a href="products">

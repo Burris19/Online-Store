@@ -20,6 +20,7 @@ class CreateProductTable extends Migration
 
             $table->integer('id_provider')->unsigned();
             $table->foreign('id_provider')->references('id')->on('providers');
+            
 
             $table->string('title');
             $table->string('description');

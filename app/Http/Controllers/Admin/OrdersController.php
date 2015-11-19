@@ -25,6 +25,7 @@ class OrdersController extends CRUDController
     public function index()
     {
         $typeUSer = \Auth::user()['employee'][0]['id_type_employee'];
+        return \Auth::user();
 
         if($typeUSer == 1)
         {
