@@ -12,4 +12,19 @@ class StoreProduct extends Model
         'idStore',
         'idProduct'
     ];
+
+    public $relations=[
+      'product',
+      'store'
+    ];
+
+    public function product()
+    {
+        return $this->hasOne('App\Repositories\Product\Product', 'id','idProduct');
+    }
+
+    public function store()
+    {
+        return $this->hasOne('App\Repositories\Store\Store', 'id','idStore');
+    }
 }

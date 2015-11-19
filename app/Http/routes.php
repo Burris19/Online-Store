@@ -25,7 +25,9 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin', 'middleware' => 'auth'
     Route::resource('departments','DepartmentController');
     Route::resource('cars','CarController');
     Route::resource('sales','SaleController');
+    Route::resource('storeProducts','StoreProductController');
     Route::get('depart/{id}','CityController@getCities');
+
 });
 
 Route::group(['namespace' => 'Frontend'], function () {
@@ -44,8 +46,3 @@ Route::get('logout',[
     'uses' => 'Auth\ClientsController@getLogout',
     'as' => 'logout'
 ]);
-
-
-
-
-
