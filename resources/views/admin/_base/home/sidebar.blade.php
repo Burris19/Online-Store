@@ -5,7 +5,7 @@
         <a href="orders">
           <i class="glyphicon glyphicon-apple"></i> <span>Pedidos</span>
         </a>
-        @if( Auth::user()['employee'][0]['id_type_employee'] === 1 )
+        @if( Auth::user()['employee'][0]['id_type_employee'] == 1 )
           <a href="products">
             <i class="glyphicon glyphicon-apple"></i> <span>Productos</span>
           </a>
@@ -28,7 +28,7 @@
             <i class="fa fa-map-marker"></i> <span>Asignacion Productos</span>
           </a>
         @else
-          @if( Auth::user()['employee'][0]['id_type_employee'] === 2 )
+          @if( Auth::user()['employee'][0]['id_type_employee'] == 2 )
             <a href="products">
             <i class="glyphicon glyphicon-apple"></i> <span>Productos</span>
             </a>
