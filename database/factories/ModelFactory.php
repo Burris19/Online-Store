@@ -22,27 +22,12 @@ $factory->define(App\Repositories\User\User::class, function (Faker\Generator $f
     ];
 });
 
-$factory->define(App\Repositories\Department\Department::class, function (Faker\Generator $faker) {
-    return [
-        'codePostal' => '01001',
-        'description' => 'Guatemala'
-    ];
-});
-
-$factory->define(App\Repositories\City\City::class, function (Faker\Generator $faker) {
-    return [
-        'id_department' => App\Repositories\Department\Department::all()->random()->id,
-        'codePostal' => '01001',
-        'description' => 'Guatemala'
-    ];
-});
-
 $factory->define(App\Repositories\Store\Store::class, function (Faker\Generator $faker) {
     return [
         'code' => 'A-1',
         'name' => 'Central',
         'phone' => '7788552266',
-        'id_city' => App\Repositories\City\City::all()->random()->id
+        'id_city' => 6
     ];
 });
 
@@ -107,7 +92,7 @@ $factory->define(App\Repositories\Employee\Employee::class, function (Faker\Gene
 $factory->define(App\Repositories\StoreAddress\StoreAddress::class, function (Faker\Generator $faker) {
     return [
         'id_store' => App\Repositories\Store\Store::all()->random()->id,
-        'id_city' => App\Repositories\City\City::all()->random()->id,
+        'id_city' => 6,
         'address' => 'Zona1'
     ];
 });
