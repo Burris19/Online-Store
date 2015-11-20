@@ -142,6 +142,7 @@ $(function(){
 
     });
 
+
     $('#idDepartment').change(function(){
         var id = $(this).val();
         getCities(id);
@@ -270,5 +271,5 @@ $(function(){
         });
 
     });
-   
+
 });

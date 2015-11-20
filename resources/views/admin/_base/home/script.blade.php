@@ -22,4 +22,3 @@
 {!! Html::script('access/helps.js') !!}
 {!! Html::script('http://maps.googleapis.com/maps/api/js?&sensor=true') !!}
 {!! Html::script('https://cdn.datatables.net/r/dt/dt-1.10.9/datatables.min.js') !!}
-
