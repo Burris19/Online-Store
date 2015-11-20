@@ -14,14 +14,14 @@ class CreateCityTable extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->increments('id');
-
+            $table->string('description');
             $table->integer('id_department')->unsigned();
             $table->foreign('id_department')->references('id')->on('departments');
+            $table->string('codigoPostal');
+            $table->string('Latitud');
+            $table->string('Logitud');
 
-            $table->string('codePostal');
-            $table->string('description');
 
-            $table->timestamps();
         });
     }
 
