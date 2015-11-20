@@ -179,6 +179,20 @@ $(function(){
                         data: data,
                         success: function(response) {
                             console.log(response);
+                            message.show();
+                            if(response.success)
+                            {
+                                localStorage.clear();
+                                $('.texto').text('Su compra se ha realizado con exito');
+                            }
+                            else
+                            {
+                                $('.texto').text('La transaccion no se pudo completar');
+                            }
+
+                            setTimeout(function(){
+                                window.location.href = '/';
+                            },4000)
 
                         },
                         error: function(xhr,ajaxOptions,thrownError){

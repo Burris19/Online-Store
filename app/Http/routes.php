@@ -27,7 +27,11 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin', 'middleware' => 'auth'
     Route::resource('sales','SaleController');
     Route::resource('storeProducts','StoreProductController');
     Route::get('depart/{id}','CityController@getCities');
+
     Route::post('saveOrder','SaleController@saveOrder');
+
+    Route::resource('maps','MapsController');
+
 
 
 });

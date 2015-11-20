@@ -312,6 +312,10 @@ class SaleController extends CRUDController
                             $this->detailOrderRepo->create($orderDetail);
                         }
                     }
+
+                    $success = true;
+                    $message = "La Compra se realizo con exito";
+                    return compact('success' ,'message');
                 }
                 else{
                     foreach($data['stores'] as $key => $value) {
