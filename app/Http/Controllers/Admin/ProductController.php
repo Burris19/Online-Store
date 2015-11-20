@@ -73,7 +73,7 @@ class ProductController extends CRUDController
         {
             $record = $this->repo->create($data);
             $storeProduct['idStore'] = 1;
-            $storeProduct['idProduct'] = $record->;
+            $storeProduct['idProduct'] = $record->id;
             $this->storeProductRepo->create($storeProduct);
             return compact('success','message','record','data');
         }
