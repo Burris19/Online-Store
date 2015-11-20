@@ -103,3 +103,11 @@ $factory->define(App\Repositories\Employee\Employee::class, function (Faker\Gene
         'type_license' => 'A'
     ];
 });
+
+$factory->define(App\Repositories\StoreAddress\StoreAddress::class, function (Faker\Generator $faker) {
+    return [
+        'id_store' => App\Repositories\Store\Store::all()->random()->id,
+        'id_city' => App\Repositories\City\City::all()->random()->id,
+        'address' => 'Zona1'
+    ];
+});

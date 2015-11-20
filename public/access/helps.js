@@ -256,6 +256,7 @@ $(function(){
             url: url,
             type: 'get',
             success: function(response) {
+                console.log(response);
 
                 setTimeout(function(){
                     window.location.href = 'orders';
