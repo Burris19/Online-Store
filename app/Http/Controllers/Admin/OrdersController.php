@@ -25,7 +25,6 @@ class OrdersController extends CRUDController
     public function index()
     {
         $typeUSer = \Auth::user()['employee'][0]['id_type_employee'];
-        return \Auth::user();
 
         if($typeUSer == 1)
         {
@@ -49,16 +48,19 @@ class OrdersController extends CRUDController
 
     public function edit($id)
     {
-        try{
+        try {
+
             $data = $this->detailOrderRepo->findOrFail($id);
             $id_store_destiny = $data->id_store_destiny;
             $data->status = 'entregado';
             $data->save();
 
-            $id_store_origin = $this->detailOrderRepo->findByField('id_store_origin',$id_store_destiny);
-            $id_store_origin->status = 'bodega';
-            $id_store_origin->save();
+            if ($data->id_store_destiny != $data->id_store_origin) {
 
+                $id_store_origin = $this->detailOrderRepo->findByField('id_store_origin',$id_store_destiny);
+                $id_store_origin->status = 'bodega';
+                $id_store_origin->save();
+            }
             $success = true;
             $message = "Registro entregado con exito";
 

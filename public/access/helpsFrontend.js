@@ -101,7 +101,7 @@ $(function(){
     });
     $('#btn-process-buy').on('click',function(e) {
         e.preventDefault();
-        $(this).prop('disabled', true);
+        //$(this).prop('disabled', true);
         var form = $('#create-buy');
         var type = form.prop('method');
         var url = form.data('url');
@@ -125,9 +125,9 @@ $(function(){
                     $('.texto').text('La transaccion no se pudo completar');
                 }
 
-                setTimeout(function(){
-                    window.location.href = '/';
-                },4000)
+                //setTimeout(function(){
+                //    window.location.href = '/';
+                //},4000)
 
             },
             error: function(xhr,ajaxOptions,thrownError){

@@ -22,27 +22,12 @@ $factory->define(App\Repositories\User\User::class, function (Faker\Generator $f
     ];
 });
 
-$factory->define(App\Repositories\Department\Department::class, function (Faker\Generator $faker) {
-    return [
-        'codePostal' => '01001',
-        'description' => 'Guatemala'
-    ];
-});
-
-$factory->define(App\Repositories\City\City::class, function (Faker\Generator $faker) {
-    return [
-        'id_department' => App\Repositories\Department\Department::all()->random()->id,
-        'codePostal' => '01001',
-        'description' => 'Guatemala'
-    ];
-});
-
 $factory->define(App\Repositories\Store\Store::class, function (Faker\Generator $faker) {
     return [
         'code' => 'A-1',
         'name' => 'Central',
         'phone' => '7788552266',
-        'id_city' => App\Repositories\City\City::all()->random()->id
+        'id_city' => 6
     ];
 });
 
@@ -92,14 +77,22 @@ $factory->define(App\Repositories\TypeEmployee\TypeEmployee::class, function (Fa
 
 $factory->define(App\Repositories\Employee\Employee::class, function (Faker\Generator $faker) {
     return [
-        'id_type_employee' => App\Repositories\City\City::all()->random()->id,
-        'id_store' => App\Repositories\City\City::all()->random()->id,
-        'id_user' => App\Repositories\City\City::all()->random()->id,
+        'id_type_employee' => 1,
+        'id_store' => 1,
+        'id_user' => 1,
         'name' => 'Julian',
         'last_name' => 'Hernandez',
         'phone' => '53345060',
         'image' => 'admin.png',
         'license_no' => '44445646',
         'type_license' => 'A'
+    ];
+});
+
+$factory->define(App\Repositories\StoreAddress\StoreAddress::class, function (Faker\Generator $faker) {
+    return [
+        'id_store' => App\Repositories\Store\Store::all()->random()->id,
+        'id_city' => 6,
+        'address' => 'Zona1'
     ];
 });

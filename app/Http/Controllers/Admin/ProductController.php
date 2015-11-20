@@ -8,6 +8,7 @@ use App\Repositories\Product\ProductRepo;
 use App\Repositories\Category\CategoryRepo;
 use App\Repositories\Provider\ProviderRepo;
 use App\Repositories\Store\StoreRepo;
+use App\Repositories\StoreProducts\StoreProductRepo;
 use Validator;
 
 class ProductController extends CRUDController
@@ -17,6 +18,7 @@ class ProductController extends CRUDController
     protected $categoryRepo;
     protected $providerRepo;
     protected $storeRepo;
+    protected $storeProductRepo = null;
 
     protected $rules = [
         'code' => 'required|unique:products',
@@ -28,12 +30,15 @@ class ProductController extends CRUDController
 
     function __construct(ProductRepo $productRepo,
                          CategoryRepo $categoryRepo,
-                         ProviderRepo $providerRepo, StoreRepo $storeRepo)
+                         ProviderRepo $providerRepo,
+                         StoreRepo $storeRepo,
+                         StoreProductRepo $storeProductRepo)
     {
         $this->repo = $productRepo;
         $this->categoryRepo = $categoryRepo;
         $this->providerRepo = $providerRepo;
         $this->storeRepo = $storeRepo;
+        $this->storeProductRepo = $storeProductRepo;
     }
 
 
@@ -57,7 +62,28 @@ class ProductController extends CRUDController
         return view($this->root . '/' . $this->module . '/create', compact('Categories','Provider'));
     }
 
-
+    public function store(Request $request)
+    {
+        $data =$request->all();
+        $validator = \Validator::make($data, $this->rules);
+        $success = true;
+        $message = "Registro guardado exitosamente";
+        $record = null;
+        if ($validator->passes())
+        {
+            $record = $this->repo->create($data);
+            $storeProduct['idStore'] = 1;
+            $storeProduct['idProduct'] = $record->id;
+            $this->storeProductRepo->create($storeProduct);
+            return compact('success','message','record','data');
+        }
+        else
+        {
+            $success=false;
+            $message = $validator->messages();
+            return compact('success','message','record','data');
+        }
+    }
 
 
 }
