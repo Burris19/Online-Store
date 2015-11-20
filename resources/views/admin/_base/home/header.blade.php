@@ -18,7 +18,6 @@
                 <p>
                   {{ Auth::user()->name }}
                   <small>{{ Auth::user()['employee'][0]['typeEmployee']['description'] }}</small>
-                  <small>{{  Auth::user()['employee'][0]['id_type_employee'] }}</small>
                 </p>
               </li>
               <!-- Menu Footer-->

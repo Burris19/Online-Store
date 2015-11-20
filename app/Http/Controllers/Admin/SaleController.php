@@ -141,6 +141,8 @@ class SaleController extends CRUDController
                  * No tengo tiendas en el departamento del cliente
                  */
 
+
+
             }
             else
             {
