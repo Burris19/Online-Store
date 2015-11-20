@@ -48,6 +48,7 @@ class OrdersController extends CRUDController
             $data = $this->repo->getWithRelations();
             $order = $this->repo->getByFieldWithRelations('id',$data[0]['id_order']);
 
+
         }else{
             $idStore = \Auth::user()['employee'][0]['id_store'];
             $data = $this->detailOrderRepo->getAndFieldWithRelations('id_store_origin',$idStore,'status','bodega');

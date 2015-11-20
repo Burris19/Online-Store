@@ -58,6 +58,24 @@
           puntoFinalLatitude = response['order'][0]['store_destiny']['city'].Latitud;
           puntoFinalLongitude = response['order'][0]['store_destiny']['city'].Logitud;
 
+          var cliente = false;
+
+          $.each(response['data'],function(a,b){
+              if(b.type == 'entrega')
+              {
+                 cliente = true;
+              }
+
+          });
+
+          if(cliente == true)
+          {
+              puntoInicioLatitude = response['order'][0]['store_destiny']['city'].Latitud;
+              puntoInicioLongitude = response['order'][0]['store_destiny']['city'].Logitud;
+
+              puntoFinalLatitude = response['order'][0]['sale']['client']['address'][0].latitude;
+              puntoFinalLongitude = response['order'][0]['sale']['client']['address'][0].longitude;
+          }
 
 
           var latlng = new google.maps.LatLng(57.0442, 9.9116);

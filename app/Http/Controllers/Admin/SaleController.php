@@ -306,12 +306,22 @@ class SaleController extends CRUDController
                         if($value['distancia'] == $idTiendasMedios[$i] )
                         {
                             $orderDetail['id_store_destiny'] = $value['idStore'] ;
+                            $orderDetail['type'] = 'bodega' ;
+                            $orderDetail['time'] = '1 dia' ;
+                            $orderDetail['status'] = 'bodega' ;
+                            $this->detailOrderRepo->create($orderDetail);
+
+                            $orderDetail['id_store_origin'] = $value['idStore'];
+                            $orderDetail['id_store_destiny'] = $value['idStore'] ;
                             $orderDetail['type'] = 'entrega' ;
                             $orderDetail['time'] = '1 dia' ;
                             $orderDetail['status'] = 'bodega' ;
                             $this->detailOrderRepo->create($orderDetail);
                         }
                     }
+
+
+
 
                     $success = true;
                     $message = "La Compra se realizo con exito";
