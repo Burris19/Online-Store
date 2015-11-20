@@ -8,73 +8,116 @@
 @endsection
 
 @section('other-scripts')
-  {!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
-  {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}
-  {!! Html::style('plugins/datatables/dataTables.bootstrap.css') !!}
-  <script>
-    $(function () {
-       $("#example1").DataTable();
-    });
+<script>
+  var puntoInicioLatitude = 0;
+  var puntoInicioLongitude = 0;
+
+  var puntoFinalLatitude = 0;
+  var puntoFinalLongitude = 0;
+
+//    $(function(){
+//
+//        $.ajax({
+//          url: 'listOrders',
+//          type: 'get',
+//          success: function(response) {
+//            console.log(response);
+//
+//            var puntoInicioLatitude = response['order'][0]['store_origin']['city'].Latitud;
+//            var puntoInicioLongitude = response['order'][0]['store_origin']['city'].Logitud;
+//
+//            var puntoFinalLatitude = response['order'][0]['store_destiny']['city'].Latitud;
+//            var puntoFinalLongitude = response['order'][0]['store_destiny']['city'].Logitud;
+//
+//
+//
+//          },
+//          error: function(xhr,ajaxOptions,thrownError){
+//            console.log(xhr.status);
+//            console.error(thrownError);
+//          }
+//
+//        });
+//
+//    });
 
 
 
 
 
-      function initialize() {
-        var guatemala=new google.maps.LatLng(14.6349261, -90.50714820000002);
-        var escuintla=new google.maps.LatLng(14.3010087, -90.7883622);
-        var mazate=new google.maps.LatLng(14.5313335, -91.5068243);
-        var reu=new google.maps.LatLng(14.5281152, -91.6843682);
-        var progreso=new google.maps.LatLng(14.8619077, -90.020893);
-        var map = new google.maps.Map(document.getElementById('map_canvas'), {
+    function initialize() {
+      $.ajax({
+        url: 'listOrders',
+        type: 'get',
+        success: function(response) {
+          console.log(response);
 
-           center: guatemala,
-           scrollwheel: true,
-           zoom: 7
-         });
+          puntoInicioLatitude = response['order'][0]['store_origin']['city'].Latitud;
+          puntoInicioLongitude = response['order'][0]['store_origin']['city'].Logitud;
 
-         var directionsDisplay = new google.maps.DirectionsRenderer({
-           map: map
-         });
-
-   // Set destination, origin and travel mode.
-
-             var ruta1 = {
-               destination: progreso,
-               origin: guatemala,
-               optimizeWaypoints:true,
-               provideRouteAlternatives: true,
-               travelMode: google.maps.TravelMode.DRIVING
-             };
-
-             var ruta2 = {
-               destination: reu,
-               origin: guatemala,
-               waypoints: [
-                 {
-                   location:escuintla,
-                   stopover:true
-                 },{
-                   location:mazate,
-                   stopover:true
-                 }],
-               optimizeWaypoints:true,
-               provideRouteAlternatives: true,
-               travelMode: google.maps.TravelMode.DRIVING
-             };
-
-             // Pass the directions request to the directions service.
-             var directionsService = new google.maps.DirectionsService();
+          puntoFinalLatitude = response['order'][0]['store_destiny']['city'].Latitud;
+          puntoFinalLongitude = response['order'][0]['store_destiny']['city'].Logitud;
 
 
-             directionsService.route(ruta2, function(response, status) {
-               if (status == google.maps.DirectionsStatus.OK) {
-                 // Display the route on the map.
-                 directionsDisplay.setDirections(response);
-               }
-             });
+
+          var latlng = new google.maps.LatLng(57.0442, 9.9116);
+          var guatemala=new google.maps.LatLng(puntoInicioLatitude, puntoInicioLongitude);
+          var escuintla=new google.maps.LatLng(14.3010087, -90.7883622);
+          var mazate=new google.maps.LatLng(14.5313335, -91.5068243);
+          var reu=new google.maps.LatLng(puntoFinalLatitude, puntoFinalLongitude);
+
+          var map = new google.maps.Map(document.getElementById('map_canvas'), {
+
+            center: guatemala,
+            scrollwheel: true,
+            zoom: 7
+          });
+
+          var directionsDisplay = new google.maps.DirectionsRenderer({
+            map: map
+          });
+
+          var ruta2 = {
+            destination: reu,
+            origin: guatemala,
+//            waypoints: [
+//              {
+//                location:escuintla,
+//                stopover:true
+//              },{
+//                location:mazate,
+//                stopover:true
+//              }],
+            optimizeWaypoints:true,
+            provideRouteAlternatives: true,
+            travelMode: google.maps.TravelMode.DRIVING
+          };
+
+          // Pass the directions request to the directions service.
+          var directionsService = new google.maps.DirectionsService();
+
+
+          directionsService.route(ruta2, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+              // Display the route on the map.
+              directionsDisplay.setDirections(response);
+            }
+          });
+
+
+
+        },
+        error: function(xhr,ajaxOptions,thrownError){
+          console.log(xhr.status);
+          console.error(thrownError);
         }
 
+      });
+    }
 
-  </script>
+
+
+
+
+</script>
 @endsection

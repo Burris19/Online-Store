@@ -31,11 +31,11 @@ class DetailOrder extends Model
 
     public function storeOrigin()
     {
-        return $this->hasOne('App\Repositories\Store\Store','id','id_store_origin');
+        return $this->hasOne('App\Repositories\Store\Store','id','id_store_origin')->with('city');
     }
 
     public function storeDestiny()
     {
-        return $this->hasOne('App\Repositories\Store\Store','id','id_store_destiny');
+        return $this->hasOne('App\Repositories\Store\Store','id','id_store_destiny')->with('city');
     }
 }

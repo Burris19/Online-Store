@@ -27,9 +27,6 @@
           <a href="storeProducts">
             <i class="glyphicon glyphicon-check"></i> <span>Asignacion Productos</span>
           </a>
-          <a href="maps">
-            <i class="glyphicon glyphicon-road"></i> <span>Mapa</span>
-          </a>
         @else
           @if( Auth::user()['employee'][0]['id_type_employee'] == 2 )
             <a href="products">
@@ -40,6 +37,9 @@
             <i class="fa fa-truck"></i> <span>Automoviles</span>
             </a>
           @endif
+              <a href="maps">
+              <i class="glyphicon glyphicon-road"></i> <span>Mapa</span>
+          </a>
         @endif
     </li>
   </ul>

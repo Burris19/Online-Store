@@ -39,6 +39,27 @@ class OrdersController extends CRUDController
 
     }
 
+    public function showMap(){
+
+        $typeUSer = \Auth::user()['employee'][0]['id_type_employee'];
+
+        if($typeUSer == 1)
+        {
+            $data = $this->repo->getWithRelations();
+            $order = $this->repo->getByFieldWithRelations('id',$data[0]['id_order']);
+
+        }else{
+            $idStore = \Auth::user()['employee'][0]['id_store'];
+            $data = $this->detailOrderRepo->getAndFieldWithRelations('id_store_origin',$idStore,'status','bodega');
+            $order = $this->repo->getByFieldWithRelations('id',$data[0]['id_order']);
+        }
+
+        return compact('data','order');
+    }
+
+
+
+
     public function show($id)
     {
         $data = $this->detailOrderRepo->getByFieldWithRelations('id_order',$id);

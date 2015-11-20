@@ -30,6 +30,9 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin', 'middleware' => 'auth'
 
     Route::post('saveOrder','SaleController@saveOrder');
 
+    Route::get('listOrders','OrdersController@showMap');
+
+
     Route::resource('maps','MapsController');
 
 
