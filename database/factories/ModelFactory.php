@@ -77,9 +77,9 @@ $factory->define(App\Repositories\TypeEmployee\TypeEmployee::class, function (Fa
 
 $factory->define(App\Repositories\Employee\Employee::class, function (Faker\Generator $faker) {
     return [
-        'id_type_employee' => App\Repositories\City\City::all()->random()->id,
-        'id_store' => App\Repositories\City\City::all()->random()->id,
-        'id_user' => App\Repositories\City\City::all()->random()->id,
+        'id_type_employee' => 1,
+        'id_store' => 1,
+        'id_user' => 1,
         'name' => 'Julian',
         'last_name' => 'Hernandez',
         'phone' => '53345060',
