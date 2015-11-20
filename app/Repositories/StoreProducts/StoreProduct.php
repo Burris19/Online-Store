@@ -25,6 +25,6 @@ class StoreProduct extends Model
 
     public function store()
     {
-        return $this->hasOne('App\Repositories\Store\Store', 'id','idStore');
+        return $this->hasOne('App\Repositories\Store\Store', 'id','idStore')->with('city');
     }
 }

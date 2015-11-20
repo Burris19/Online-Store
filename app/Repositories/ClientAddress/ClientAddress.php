@@ -14,7 +14,7 @@ class ClientAddress extends Model
       'address',
       'observation',
       'latitude',
-      'longitude',
+      'longitude'
     ];
 
     public $relations = [

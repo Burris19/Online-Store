@@ -114,20 +114,95 @@ $(function(){
             },
             success: function(response) {
                 console.log(response);
-                message.show();
-                if(response.success)
+                if(response.bandera)
                 {
-                    localStorage.clear();
-                    $('.texto').text('Su compra se ha realizado con exito');
-                }
-                else
-                {
-                    $('.texto').text('La transaccion no se pudo completar');
-                }
+                    //posicion del cliente
+                    var latitudeCliente = response.client.latitude;
+                    var longitudeCliente = response.client.longitude;
 
-                //setTimeout(function(){
-                //    window.location.href = '/';
-                //},4000)
+                    var idStoreMin = [] ;
+                    var distanciaTotal = 0;
+
+                    $.each(response.stores,function(a,b){
+                        //posicion de la tienda
+                        var latitudeStore = b['store']['city'].Latitud;
+                        var longitudeStore = b['store']['city'].Logitud;
+
+                        var cliente = new google.maps.LatLng(latitudeCliente, longitudeCliente);
+                        var store = new google.maps.LatLng(latitudeStore, longitudeStore);
+                        var distancia = google.maps.geometry.spherical.computeDistanceBetween(cliente, store);
+
+                        if(distanciaTotal == 0)
+                        {
+                            distanciaTotal = distancia;
+                            idStoreMin[0] = b['store']['id'];
+                        }else
+                        {
+                            if(distancia < distanciaTotal)
+                            {
+                                distanciaTotal = distancia;
+                                idStoreMin[0] = b['store']['id'];
+                            }
+                        }
+                    });
+
+
+                    var storeWithDistance = [];
+
+                    $.each(response.getStores, function(a2,b2){
+                        var latitudeStore2 = b2['city'].Latitud;
+                        var longitudeStore2 = b2['city'].Logitud;
+
+                        var cliente2 = new google.maps.LatLng(latitudeCliente, longitudeCliente);
+                        var store2 = new google.maps.LatLng(latitudeStore2, longitudeStore2);
+                        var distancia2 = google.maps.geometry.spherical.computeDistanceBetween(cliente2, store2);
+
+                        var datos = {
+                            idStore : b2.id,
+                            distancia : distancia2
+                        }
+
+                        storeWithDistance.push(datos);
+
+                    });
+
+                    var data = {
+                        idStoreOrigin : idStoreMin,
+                        stores : storeWithDistance,
+                        idSale : response.record.id
+
+                    };
+
+                    $.ajax({
+                        url: 'admin/saveOrder',
+                        type: 'post',
+                        data: data,
+                        success: function(response) {
+                            console.log(response);
+
+                        },
+                        error: function(xhr,ajaxOptions,thrownError){
+                            console.log(xhr.status);
+                            console.error(thrownError);
+                        }
+                    });
+
+                }else{
+                    message.show();
+                    if(response.success)
+                    {
+                        localStorage.clear();
+                        $('.texto').text('Su compra se ha realizado con exito');
+                    }
+                    else
+                    {
+                        $('.texto').text('La transaccion no se pudo completar');
+                    }
+
+                    setTimeout(function(){
+                        window.location.href = '/';
+                    },4000)
+                }
 
             },
             error: function(xhr,ajaxOptions,thrownError){

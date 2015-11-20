@@ -24,6 +24,9 @@ class CreateClientAddressTable extends Migration
             $table->string('address');
             $table->string('observation');
 
+            $table->string('latitude');
+            $table->string('longitude');
+
             $table->timestamps();
         });
     }
